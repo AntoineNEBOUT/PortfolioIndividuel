@@ -8,7 +8,7 @@
 
     <title>Antoine Nebout - Portfolio</title>
 </head>
-<body class="bg-background">
+<body class="bg-background dark">
     <div class="absolute bottom-4 left-4">
         <span class="sm:hidden">XS</span>
         <span class="hidden sm:block md:hidden">SM</span>
@@ -18,18 +18,18 @@
         <span class="hidden 2xl:block 3xl:hidden">2XL</span>
     </div>
     <header class="flex justify-center">
-        <nav class="bg-white/25 border border-white/20  p-4 rounded flex md:justify-between align-middle mt-3 lg:gap-28 md:gap-20 max-md:gap-28">
-            <button type="button" class="md:flex md:justify-between md:align-middle rounded-full border border-text">
+        <nav class="bg-white/25 border border-white/20  p-4 rounded flex justify-between items-center mt-3 lg:gap-28 md:gap-20 max-md:w-3/4 fixed">
+            <button type="button" class="md:flex md:justify-between md:items-center rounded-full border border-text">
                 <span class="max-md:hidden md:p-1 md:pl-2 text-text">Assombrir</span>
                 <img src="images\others\moon.svg" alt="icône de lune" class="p-2 md:p-1 md:pr-2">
             </button>
             <ul class="md:flex max-md:hidden">
-                <li><a class="max-md:hidden max-md:m-0 m-2 text-text underline-offset-8 hover:underline decoration-secondary" href="#about_me">À propos</a></li>
-                <li><a class="max-md:hidden max-md:m-0 m-2 text-text underline-offset-8 hover:underline decoration-secondary" href="#skills">Compétences</a></li>
-                <li><a class="max-md:hidden max-md:m-0 m-2 text-text underline-offset-8 hover:underline decoration-secondary" href="#education_and_experience">Expériences</a></li>
-                <li><a class="max-md:hidden max-md:m-0 m-2 text-text underline-offset-8 hover:underline decoration-secondary" href="#projects">Projets</a></li>
+                <li><a class="max-md:hidden max-md:m-0 m-2 text-text underline-offset-8 hover:underline decoration-secondary active:text-accent" href="#about_me">À propos</a></li>
+                <li><a class="max-md:hidden max-md:m-0 m-2 text-text underline-offset-8 hover:underline decoration-secondary active:text-accent" href="#skills">Compétences</a></li>
+                <li><a class="max-md:hidden max-md:m-0 m-2 text-text underline-offset-8 hover:underline decoration-secondary active:text-accent" href="#education_and_experience">Expériences</a></li>
+                <li><a class="max-md:hidden max-md:m-0 m-2 text-text underline-offset-8 hover:underline decoration-secondary active:text-accent" href="#projects">Projets</a></li>
             </ul>
-            <button type="button" class="md:rounded md:p-1 md:text-background md:bg-text md:px-2 md:hover:bg-secondary">
+            <button type="button" class="text-text underline-offset-8 hover:underline decoration-secondary active:active:text-accent md:rounded md:p-1 md:text-background md:bg-text md:px-2 md:hover:bg-secondary">
                 Contacter
             </button>
             <button type="button" class="md:hidden">
@@ -38,20 +38,20 @@
         </nav>
     </header>
     <main>
-        <section id="about_me">
-            <div>
-                <div>
-                    <h1 class="font-bold text-text font-sans">
+        <section id="about_me" class="flex justify-center mt-20">
+            <div class="bg-white/25 border border-white/20 py-4 rounded flex max-md:flex-col-reverse max-md:gap-5 justify-end items-center md:justify-center md:items-center m-5 max-md:w-3/4 md:w-fit h-fit">
+                <div class="max-md:w-4/5 max-md:flex max-md:flex-col max-md:items-center md:w-80 md:mx-11">
+                    <h1 class="font-bold text-text font-sans text-3xl max-md:text-center">
                         Antoine Nebout
                     </h1>
-                    <p>
-                        TEXTE À PROPOS
-                    </p>
-                    <button type="button">
+                    <div class="text-text my-3 max-md:text-center md:text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                    <button type="button" class="rounded bg-primary text-background py-2 px-3">
                         Télécharger mon CV
                     </button>
                 </div>
-                <img src="images\profilePictures\chemiseBleuFonce1RBG.png" alt="Photo de profil">
+                <img src="images\profilePictures\chemiseBleuFonce1RBG.png" alt="Photo de profil" class="mx-11">
             </div>
         </section>
 
