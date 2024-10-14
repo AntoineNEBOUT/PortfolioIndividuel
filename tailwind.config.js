@@ -23,6 +23,12 @@ module.exports = {
 		
 		fontFamily: {
 			'sans': ['Poppins', 'sans-serif']
+		},
+
+		spacing: {
+			'504': '504px',
+			'443': '443px',
+			'281': '281px'
 		}
 	},
   },

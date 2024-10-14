@@ -8,7 +8,7 @@
 
     <title>Antoine Nebout - Portfolio</title>
 </head>
-<body class="bg-background dark">
+<body class="bg-background">
     <div class="absolute bottom-4 left-4">
         <span class="sm:hidden">XS</span>
         <span class="hidden sm:block md:hidden">SM</span>
@@ -17,8 +17,12 @@
         <span class="hidden xl:block 2xl:hidden">XL</span>
         <span class="hidden 2xl:block 3xl:hidden">2XL</span>
     </div>
+    <div class="w-504 h-504 bg-primary rounded-full fixed top-16 right-7"></div>
+    <div class="w-443 h-443 bg-secondary rounded-full fixed top-3 left-16"></div>
+    <div class="w-281 h-281 bg-accent rounded-full fixed bottom-4 md:left-20"></div>
+
     <header class="flex justify-center">
-        <nav class="bg-white/25 border border-white/20  p-4 rounded flex justify-between items-center mt-3 lg:gap-28 md:gap-20 max-md:w-3/4 fixed">
+        <nav class="bg-white/25 border border-white/20 drop-shadow p-4 rounded flex justify-between items-center mt-3 lg:gap-28 md:gap-20 max-md:w-3/4 fixed z-50">
             <button type="button" class="md:flex md:justify-between md:items-center rounded-full border border-text">
                 <span class="max-md:hidden md:p-1 md:pl-2 text-text">Assombrir</span>
                 <img src="images\others\moon.svg" alt="icône de lune" class="p-2 md:p-1 md:pr-2">
@@ -38,10 +42,10 @@
         </nav>
     </header>
     <main>
-        <section id="about_me" class="flex justify-center mt-20">
-            <div class="bg-white/25 border border-white/20 py-4 rounded flex max-md:flex-col-reverse max-md:gap-5 justify-end items-center md:justify-center md:items-center m-5 max-md:w-3/4 md:w-fit h-fit">
+        <section id="about_me" class="flex justify-center">
+            <div class="bg-white/25 border border-white/20 drop-shadow py-4 rounded flex max-md:flex-col-reverse max-md:gap-5 justify-end items-center md:justify-center md:items-center max-md:w-3/4 md:w-fit h-fit mt-24">
                 <div class="max-md:w-4/5 max-md:flex max-md:flex-col max-md:items-center md:w-80 md:mx-11">
-                    <h1 class="font-bold text-text font-sans text-3xl max-md:text-center">
+                    <h1 class="font-bold text-text font-sans text-4xl max-md:text-center">
                         Antoine Nebout
                     </h1>
                     <div class="text-text my-3 max-md:text-center md:text-justify">
@@ -56,104 +60,116 @@
         </section>
 
         <section id="skills">
-            <h2>
-                Compétences
-            </h2>
-            <div>
-                <h3>
-                    Langages
-                </h3>
-                <div>
-                    <img src="images\skillsPictures\programmingLangages\python.svg" alt="icône python">
-                    <img src="images\skillsPictures\programmingLangages\java.svg" alt="icône java">
-                    <img src="images\skillsPictures\programmingLangages\c++.svg" alt="icône c plus plus">
-                    <img src="images\skillsPictures\programmingLangages\c.svg" alt="icône c">
-                    <img src="images\skillsPictures\programmingLangages\html5.svg" alt="icône html">
-                    <img src="images\skillsPictures\programmingLangages\css.svg" alt="icône css">
-                    <img src="images\skillsPictures\programmingLangages\javascript.svg" alt="icône javascript">
+            <div class=" flex justify-center items-center">
+                <h2 class="text-text text-center font-bold font-sans text-3xl mt-24">
+                    Compétences
+                </h2>
+            </div>
+            <div class="flex justify-center">
+                <div class="bg-white/25 border border-white/20 drop-shadow p-6 flex-col justify-center rounded max-md:w-3/4 md:w-3/5 md:h-fit my-6">
+                    <h3 class="text-text text-center font-bold font-sans text-2xl mb-4">
+                        Langages
+                    </h3>
+                    <div class="flex justify-center items-center flex-wrap gap-4">
+                        <img src="images\skillsPictures\programmingLangages\python.svg" alt="icône python" class="w-20 h-20">
+                        <img src="images\skillsPictures\programmingLangages\java.svg" alt="icône java" class="w-20 h-20">
+                        <img src="images\skillsPictures\programmingLangages\c++.svg" alt="icône c plus plus" class="w-20 h-20">
+                        <img src="images\skillsPictures\programmingLangages\c.svg" alt="icône c" class="w-20 h-20">
+                        <img src="images\skillsPictures\programmingLangages\html5.svg" alt="icône html" class="w-20 h-20">
+                        <img src="images\skillsPictures\programmingLangages\css.svg" alt="icône css" class="w-20 h-20">
+                        <img src="images\skillsPictures\programmingLangages\javascript.svg" alt="icône javascript" class="w-20 h-20">
+                    </div>
                 </div>
             </div>
-            <div>
-
-                <h3>
-                    Outils
-                </h3>
-                <div>
-                    <img src="images\skillsPictures\tools\github-light.svg" alt="icône github">
-                    <img src="images\skillsPictures\tools\vscode.svg" alt="icône visual studio code">
-                    <img src="images\skillsPictures\tools\intellijidea.svg" alt="icône intellij idea">
-                    <img src="images\skillsPictures\tools\wordpress.svg" alt="icône wordpress">
+            
+            <div class="flex justify-center">
+                <div class="bg-white/25 border border-white/20 drop-shadow p-6 flex-col justify-center rounded max-md:w-3/4 md:w-3/5 md:h-fit mb-6">
+                    <h3 class="text-text text-center font-bold font-sans text-2xl mb-4">
+                        Outils
+                    </h3>
+                    <div class="flex justify-center items-center flex-wrap gap-4">
+                        <img src="images\skillsPictures\tools\github-light.svg" alt="icône github" class="w-20 h-20">
+                        <img src="images\skillsPictures\tools\vscode.svg" alt="icône visual studio code" class="w-20 h-20">
+                        <img src="images\skillsPictures\tools\intellijidea.svg" alt="icône intellij idea" class="w-20 h-20">
+                        <img src="images\skillsPictures\tools\wordpress.svg" alt="icône wordpress" class="w-20 h-20">
+                    </div>
                 </div>
             </div>
 
-            <div>
-                <h3>
-                    Framework
-                </h3>
-                <div>
-                    <img src="images\skillsPictures\frameworks\tailwindcss.svg" alt="icône tailwindcss">
-                    <img src="images\skillsPictures\frameworks\qt.svg" alt="icône qt">
+            <div class="flex justify-center">
+                <div class="bg-white/25 border border-white/20 drop-shadow p-6 flex-col justify-center rounded max-md:w-3/4 md:w-3/5 md:h-fit">
+                    <h3 class="text-text text-center font-bold font-sans text-2xl mb-4">
+                        Framework
+                    </h3>
+                    <div class="flex justify-center items-center flex-wrap gap-4">
+                        <img src="images\skillsPictures\frameworks\tailwindcss.svg" alt="icône tailwindcss" class="w-20 h-20">
+                        <img src="images\skillsPictures\frameworks\qt.svg" alt="icône qt" class="w-20 h-20">
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="education_and_experience">
-            <h2>
-                Formations & Expériences
-            </h2>
-            <div>
-                <h3>
-                    Formations
-                </h3>
-                <h4>
-                    Bachelor Conception & Développement d'applications - Institut G4
-                </h4>
-                <h5>
-                    Septembre 2024 à aujoud'hui
-                </h5>
-                <p>
-                    Je prépare actuellement le bachelor Conception & Développement d’applications à l’Institut G4 à Lyon. 
-                    Ainsi, je développe constamment de nouvelles compétences techniques, collectives et personnelles.
-                </p>
-                
-                <h4>
-                    Baccalauréat Général - Lycée Notre Dame de Mongré
-                </h4>
-                <h5>
-                    Septembre 2023 - Juin 2024
-                </h5>
-                <p>
-                    J’ai préparé un baccalauréat général au Lycée Notre Dame de Mongré à Villefranche-sur-Saône entre septembre 2022 et juin 2024. 
-                    À cette période, j’ai suivi les spécialités Mathématiques et Numérique et Sciences Informatiques. Grâce à ces enseignements, 
-                    j’ai notamment pu développer ma capacité d’analyse et ma logique algorithmique.
-                </p>
+            <div class=" flex justify-center items-center">
+                <h2 class="text-text text-center font-bold font-sans text-3xl mt-24">
+                    Formations & Expériences
+                </h2>
             </div>
-            <div>
-                <h3>
-                    Expériences
-                </h3>
-                <h4>
-                    Alternant Informatique - Technicentre TGV de Lyon
-                </h4>
-                <h5>
-                    Septembre 2024 à aujoud'hui
-                </h5>
-                <p>
-                    Je réalise actuellement cette alternance en parallèle de mes études à l’Institut G4.
-                    Je réalise principalement de la correction de tickets liés à des dysfonctionnements logiciels.
-                    Je travaille parfois sur la réalisation de projets complets répondant à un besoin précis.
-                </p>
-                
-                <h4>
-                    Stage d'observation - ENEDIS
-                </h4>
-                <h5>
-                    Juin 2022
-                </h5>
-                <p>
-                    Ce stage d’observation m’a fait découvrir le monde professionnel du développement et de la gestion de projet. 
-                    C’est à cette occasion que j’ai découvert l’organisation d’une telle équipe et les différents rôles qui la composent.
-                </p>
+            <div class="flex md:justify-center max-md:flex-col max-md:items-center mt-6 gap-6">
+                <div class="bg-white/25 border border-white/20 drop-shadow p-6 flex-col rounded max-md:w-3/4 md:w-5/12 md:h-auto">
+                    <h3 class="text-text text-center font-bold font-sans text-2xl mb-4">
+                        Formations
+                    </h3>
+                    <h4 class="text-text font-bold font-sans text-lg">
+                        Bachelor Conception & Développement d'applications - Institut G4
+                    </h4>
+                    <h5 class="text-text font-semibold font-sans text-base mt-3">
+                        Septembre 2024 à aujoud'hui
+                    </h5>
+                    <p class="text-text">
+                        Je prépare actuellement le bachelor Conception & Développement d’applications à l’Institut G4 à Lyon. 
+                        Ainsi, je développe constamment de nouvelles compétences techniques, collectives et personnelles.
+                    </p>
+                    
+                    <h4 class="text-text font-bold font-sans text-lg mt-5">
+                        Baccalauréat Général - Lycée Notre Dame de Mongré
+                    </h4>
+                    <h5 class="text-text font-semibold font-sans text-base mt-3">
+                        Septembre 2023 - Juin 2024
+                    </h5>
+                    <p class="text-text">
+                        J’ai préparé un baccalauréat général au Lycée Notre Dame de Mongré à Villefranche-sur-Saône entre septembre 2022 et juin 2024. 
+                        À cette période, j’ai suivi les spécialités Mathématiques et Numérique et Sciences Informatiques. Grâce à ces enseignements, 
+                        j’ai notamment pu développer ma capacité d’analyse et ma logique algorithmique.
+                    </p>
+                </div>
+                <div class="bg-white/25 border border-white/20 drop-shadow p-6 flex-col rounded max-md:w-3/4 md:w-5/12 md:h-auto">
+                    <h3 class="text-text text-center font-bold font-sans text-2xl mb-4">
+                        Expériences
+                    </h3>
+                    <h4 class="text-text font-bold font-sans text-lg">
+                        Alternant Informatique - Technicentre TGV de Lyon
+                    </h4>
+                    <h5 class="text-text font-semibold font-sans text-base mt-3">
+                        Septembre 2024 à aujoud'hui
+                    </h5>
+                    <p class="text-text">
+                        Je réalise actuellement cette alternance en parallèle de mes études à l’Institut G4.
+                        Je réalise principalement de la correction de tickets liés à des dysfonctionnements logiciels.
+                        Je travaille parfois sur la réalisation de projets complets répondant à un besoin précis.
+                    </p>
+                    
+                    <h4 class="text-text font-bold font-sans text-lg mt-5">
+                        Stage d'observation - ENEDIS
+                    </h4>
+                    <h5 class="text-text font-semibold font-sans text-base mt-3">
+                        Juin 2022
+                    </h5>
+                    <p class="text-text">
+                        Ce stage d’observation m’a fait découvrir le monde professionnel du développement et de la gestion de projet. 
+                        C’est à cette occasion que j’ai découvert l’organisation d’une telle équipe et les différents rôles qui la composent.
+                    </p>
+                </div>
             </div>
         </section>
 
