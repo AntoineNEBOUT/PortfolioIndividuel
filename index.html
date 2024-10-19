@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="css\tailwind.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <title>Antoine Nebout - Portfolio</title>
 </head>
-<body class="bg-background">
+<body class="bg-background scroll-smooth overflow-x-hidden">
     <div class="fixed bottom-4 left-4">
         <span class="sm:hidden">XS</span>
         <span class="hidden sm:block md:hidden">SM</span>
@@ -37,32 +38,44 @@
                 <img src="images\others\menuLight.svg" alt="icône du menu">
             </button>
         </nav> -->
-        <nav class="bg-opacity-50 backdrop-blur-md drop-shadow-md shadow-md dark:shadow-secondary p-4 rounded flex justify-between items-center mt-3 lg:gap-28 md:gap-20 max-md:w-3/4">
-            <button id="theme_toggle" type="button" class="text-text md:flex md:justify-between md:items-center rounded-full border border-text">
-                <span class="max-md:hidden md:p-1 md:pl-2 text-text">Assombrir</span>
-                <img src="../images\others\moon.svg" alt="icône de lune" class="p-2 md:p-1 md:pr-2 dark:p-0 dark:md:p-0 dark:md:pr-0 dark:hidden">
-                <img src="../images\others\sun.svg" alt="icône de lune" class="hidden p-0 md:p-0 md:pr-0 dark:p-1 dark:md:p-2 dark:md:pr-2 dark:block">
+        <nav class="bg-opacity-50 backdrop-blur-md  p-4 rounded flex justify-between items-center mt-3 lg:gap-28 md:gap-20 max-md:w-3/4">
+            <button id="theme_toggle" type="button" class="group text-text md:flex md:justify-between md:items-center rounded-full border border-text hover:bg-text hover:text-background">
+                <span class="max-md:hidden md:p-1 md:pl-2">Assombrir</span>
+                <div class="p-2 md:p-1 md:pr-2 dark:p-0 dark:md:p-0 dark:md:pr-0 dark:hidden group-hover:p-0 group-hover:md:p-0 group-hover:md:pr-0 group-hover:hidden dark:group-hover:p-2 dark:group-hover:md:p-1 dark:group-hover:md:pr-2 dark:group-hover:block">
+                    <img src="../images\others\moon.svg" alt="icône de lune">
+                </div>
+                <div class="hidden p-0 md:p-0 md:pr-0 dark:p-2 dark:md:p-1 dark:md:pr-2 dark:block dark:group-hover:p-0 dark:group-hover:md:p-0 dark:group-hover:md:pr-0 dark:group-hover:hidden group-hover:p-2 group-hover:md:p-1 group-hover:md:pr-2 group-hover:block">
+                    <img src="../images\others\sun.svg" alt="icône de lune">
+                </div>
             </button>
             <ul class="md:flex max-md:hidden">
-                <li><a class="max-md:hidden max-md:m-0 m-2 text-text underline-offset-8 hover:border-dashed hover:border-b border-accent active:border-solid p-1 rounded-full" href="../index.html#about_me">À propos</a></li>
-                <li><a class="max-md:hidden max-md:m-0 m-2 text-text underline-offset-8 hover:border-dashed hover:border-b border-accent active:border-solid p-1 rounded-full" href="../index.html#skills">Compétences</a></li>
-                <li><a class="max-md:hidden max-md:m-0 m-2 text-text underline-offset-8 hover:border-dashed hover:border-b border-accent active:border-solid p-1 rounded-full" href="../index.html#education_and_experience">Expériences</a></li>
-                <li><a class="max-md:hidden max-md:m-0 m-2 text-text underline-offset-8 hover:border-dashed hover:border-b border-accent active:border-solid p-1 rounded-full" href="../index.html#projects">Projets</a></li>
+                <li><a class="max-md:hidden max-md:m-0 m-2 text-text hover:opacity-75 activeNavBar" href="../index.html#about_me">À propos</a></li>
+                <li><a class="max-md:hidden max-md:m-0 m-2 text-text hover:opacity-75" href="../index.html#skills">Compétences</a></li>
+                <li><a class="max-md:hidden max-md:m-0 m-2 text-text hover:opacity-75" href="../index.html#education_and_experience">Expériences</a></li>
+                <li><a class="max-md:hidden max-md:m-0 m-2 text-text hover:opacity-75" href="../index.html#projects">Projets</a></li>
             </ul>
-            <button type="button" onclick="window.location.href='pages\\contact.html';" class="text-text max-md:hidden active:bg-text active:text-background md:rounded md:p-1 md:border md:border-text md:px-2 md:hover:border-dashed">
+            <!-- <button type="button" onclick="window.location.href='pages\\contact.html';" class="text-text max-md:hidden active:bg-text active:text-background md:rounded md:p-1 md:border md:border-text md:px-2 md:hover:border-dashed">
                 Contacter
             </button>
-            <button type="button" class="text-text dark:text-background max-md:underline-offset-8 max-md:hover:underline decoration-secondary active:text-accent dark:active:text-accent md:hidden">
+            <button type="button" class="text-text max-md:underline-offset-8 max-md:hover:underline decoration-secondary active:text-accent dark:active:text-accent md:hidden">
                 À propos
+            </button> -->
+            <button type="button" onclick="window.location.href='pages\\contact.html';" class="text-text max-md:hover:opacity-75 max-md:active:text-accent md:rounded md:p-1 md:text-background md:bg-text md:px-2 md:hover:text-text md:hover:bg-background md:border md:border-text md:hover:border-dashed md:active:border-solid">
+                Contacter
             </button>
             <button type="button" class="md:hidden">
-                <img src="../images\others\menuLight.svg" alt="icône du menu">
+                <div class="dark:hidden">
+                    <img src="../images\others\menuLight.svg" alt="icône du menu">
+                </div>
+                <div class="hidden dark:block">
+                    <img src="../images\others\menuDark.svg" alt="icône du menu">
+                </div>
             </button>
         </nav>
     </header>
     <main>
-        <section id="about_me" class="flex justify-center items-center xl:h-dvh">
-            <div class="rounded flex max-md:flex-col-reverse max-md:gap-5 justify-end items-center md:justify-center md:items-center max-md:w-3/4 md:w-fit h-fit">
+        <section id="about_me" class="flex justify-center items-center xl:h-dvh max-xl:mt-24">
+            <div class="rounded flex max-md:flex-col-reverse max-md:gap-5 justify-end items-center md:justify-center md:items-center max-md:w-3/4 md:w-fit h-fit bg-cardBackground drop-shadow-md animate-fade animate-duration-1000">
                 <div class="max-md:w-4/5 max-md:flex max-md:flex-col max-md:items-center md:w-80 md:mx-11">
                     <h1 class="font-bold text-text font-sans text-4xl max-md:text-center">
                         Antoine Nebout
@@ -74,7 +87,9 @@
                         Télécharger mon CV
                     </button>
                 </div>
-                <img src="images\profilePictures\chemiseBleuFonce1RBG.png" alt="Photo de profil" class="mx-11 max-xl:mt-24">
+                <div>
+                    <img src="images\profilePictures\chemiseBleuFonce1RBG.png" alt="Photo de profil" class="mx-11">
+                </div>
             </div>
         </section>
         
@@ -84,8 +99,8 @@
                     Compétences
                 </h2>
             </div>
-            <div class="flex justify-center">
-                <div class="bg-background drop-shadow-md p-6 flex-col justify-center rounded max-md:w-3/4 md:w-fit md:h-fit my-6">
+            <div class="flex justify-center" data-aos="fade-right" data-aos-duration="1000">
+                <div class="bg-cardBackground drop-shadow-md p-6 flex-col justify-center rounded max-md:w-3/4 md:w-fit md:h-fit my-6">
                     <!-- <h3 class="text-text text-center font-bold font-sans text-2xl mb-4">
                         Langages
                     </h3> -->
@@ -101,8 +116,8 @@
                 </div>
             </div>
             
-            <div class="flex justify-center">
-                <div class="bg-background drop-shadow-md p-6 flex-col justify-center rounded max-md:w-3/4 md:w-fit md:h-fit mb-6">
+            <div class="flex justify-center" data-aos="fade-left" data-aos-duration="1000">
+                <div class="bg-cardBackground drop-shadow-md p-6 flex-col justify-center rounded max-md:w-3/4 md:w-fit md:h-fit mb-6">
                     <!-- <h3 class="text-text text-center font-bold font-sans text-2xl mb-4">
                         Outils
                     </h3> -->
@@ -116,8 +131,9 @@
                 </div>
             </div>
 
-            <div class="flex justify-center">
-                <div class="bg-background drop-shadow-md p-6 flex-col justify-center rounded max-md:w-3/4 md:w-fit md:h-fit">
+            <div class="flex justify-center" data-aos="fade-up"
+            data-aos-duration="1000">
+                <div class="bg-cardBackground drop-shadow-md p-6 flex-col justify-center rounded max-md:w-3/4 md:w-fit md:h-fit">
                     <!-- <h3 class="text-text text-center font-bold font-sans text-2xl mb-4">
                         Framework
                     </h3> -->
@@ -138,11 +154,11 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="flex flex-col gap-4 w-3/4 md:w-2/3 justify-self-center lg:justify-self-end">
-                    <h3 class="text-text text-center font-bold font-sans text-2xl col-start-1 col-end-2 row-start-1 row-end-2 justify-self-center">
+                    <h3 class="text-text text-center font-bold font-sans text-2xl justify-self-center">
                         Formations
                     </h3>
 
-                    <div class="flex flex-col-reverse items-center justify-center xl:flex-row xl:justify-center bg-background drop-shadow-md p-6 rounded gap-4">
+                    <div class="flex flex-col-reverse items-center justify-center xl:flex-row xl:justify-center bg-cardBackground drop-shadow-md p-6 rounded gap-4" data-aos="fade-right" data-aos-duration="1000">
                         <div class="flex flex-col gap-4 xl:w-2/3">
                             <h4 class="text-text font-bold font-sans text-xl text-center xl:text-left">
                                 Bachelor Conception & Développement d'Applications
@@ -162,7 +178,7 @@
                         <img src="images\educationPicture\g4Logo.png" alt="image de ND De Mongré" class="w-auto h-36 rounded">
                     </div>
                     
-                    <div class="flex flex-col-reverse items-center justify-center xl:flex-row xl:justify-center bg-background drop-shadow-md p-6 rounded gap-4">
+                    <div class="flex flex-col-reverse items-center justify-center xl:flex-row xl:justify-center bg-cardBackground drop-shadow-md p-6 rounded gap-4" data-aos="fade-right" data-aos-duration="1000">
                         <div class="flex flex-col gap-4 xl:w-2/3">
                             <h4 class="text-text font-bold font-sans text-xl text-center xl:text-left">
                                 Baccalauréat Général
@@ -183,12 +199,12 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col gap-4 w-2/3 justify-self-center lg:justify-self-start">
-                    <h3 class="text-text text-center font-bold font-sans text-2xl col-start-2 col-end-3 row-start-1 row-end-2">
+                <div class="flex flex-col gap-4 w-3/4 md:w-2/3 justify-self-center lg:justify-self-start">
+                    <h3 class="text-text text-center font-bold font-sans text-2xl">
                         Expériences
                     </h3>
     
-                    <div class="flex flex-col-reverse items-center justify-center xl:flex-row xl:justify-center bg-background drop-shadow-md p-6 rounded gap-4 h-full">
+                    <div class="flex flex-col-reverse items-center justify-center xl:flex-row xl:justify-center bg-cardBackground drop-shadow-md p-6 rounded gap-4 h-full" data-aos="fade-left" data-aos-duration="1000">
                         <div class="flex flex-col gap-4 xl:w-2/3">
                             <h4 class="text-text font-bold font-sans text-xl text-center xl:text-left">
                                 Alternant Informatique
@@ -208,7 +224,7 @@
                         <img src="images\experiencePicture\sncf.avif" alt="logo technicentre lyon" class="w-auto h-36 rounded">
                     </div>
     
-                    <div class="flex flex-col-reverse items-center justify-center xl:flex-row xl:justify-center bg-background drop-shadow-md p-6 rounded gap-4">
+                    <div class="flex flex-col-reverse items-center justify-center xl:flex-row xl:justify-center bg-cardBackground drop-shadow-md p-6 rounded gap-4" data-aos="fade-left" data-aos-duration="1000">
                         <div class="flex flex-col gap-4 xl:w-2/3">
                             <h4 class="text-text font-bold font-sans text-xl text-center xl:text-left">
                                 Stage d'observation
@@ -269,7 +285,8 @@
             </div> -->
             
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center gap-6">
-                <div class="bg-background drop-shadow-md p-6 flex flex-col justify-between items-center flex-wrap gap-4 w-3/4 sm:w-72 h-auto rounded">
+                <div class="bg-cardBackground drop-shadow-md p-6 flex flex-col justify-between items-center flex-wrap gap-4 w-3/4 sm:w-72 h-auto rounded" data-aos="fade-right"
+                data-aos-duration="1000">
                     <h4 class="text-text text-center font-bold font-sans text-xl">
                         Portfolio personnel
                     </h4>
@@ -284,7 +301,8 @@
                     </div>
                 </div>
     
-                <div class="bg-background drop-shadow-md p-6 flex flex-col justify-between items-center flex-wrap gap-4 w-3/4 sm:w-72 h-auto rounded">
+                <div class="bg-cardBackground drop-shadow-md p-6 flex flex-col justify-between items-center flex-wrap gap-4 w-3/4 sm:w-72 h-auto rounded" data-aos="fade-up"
+                data-aos-duration="1000">
                     <h4 class="text-text text-center font-bold font-sans text-xl">
                         Site vitrine pour une équipe d'esport
                     </h4>
@@ -297,7 +315,8 @@
                     </div>
                 </div>
     
-                <div class="bg-background drop-shadow-md p-6 flex flex-col justify-between items-center flex-wrap gap-4 w-3/4 sm:w-72 h-auto rounded">
+                <div class="bg-cardBackground drop-shadow-md p-6 flex flex-col justify-between items-center flex-wrap gap-4 w-3/4 sm:w-72 h-auto rounded" data-aos="fade-left"
+                data-aos-duration="1000">
                     <h4 class="text-text text-center font-bold font-sans text-xl">
                         Gestionnaire de tournoi - Les Trophées NSI 2024
                     </h4>
@@ -316,5 +335,9 @@
     </main>
     <script src="js/navbar.js"></script>
     <script src="js/darkMode.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

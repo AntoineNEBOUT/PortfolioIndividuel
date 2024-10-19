@@ -1,28 +1,20 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll("section");
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    document.querySelectorAll('nav a').forEach(link => {
-                        link.classList.remove('active');
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('nav a');
 
-                        // Vérification si l'ID est vide
-                        const targetId = entry.target.id ? `#${entry.target.id}` : '#main-page';
-                        
-                        if (link.getAttribute('href') === targetId) {
-                            link.classList.add('active');
-                        }
-                    });
-                }
-            });
-        },
-        {
-            threshold: 0.7
+window.addEventListener('scroll', () => {
+    let current = '';
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 60) {
+            current = section.getAttribute('id');
         }
-    );
+    });
 
-    sections.forEach((section) => {
-        observer.observe(section);
+    navLinks.forEach(link => {
+        link.classList.remove('activeNavBar');
+        if (link.getAttribute('href').includes(current)) {
+            link.classList.add('activeNavBar');
+        }
     });
 });

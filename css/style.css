@@ -6,17 +6,24 @@
     :root {
       --text: #181b1b;
       --background: #eff5f4;
+      --cardBackground: #E8EDEC;
       --primary: #0b7573;
-      --secondary: #5f8ef1;
+      /*--secondary: #5f8ef1;*/
+      --secondary: #C4D5F2;
       --accent: #00a1ff;
     }
     .dark {
       --text: #e4e7e7;
-      --background: #060d33;
+      --background: #0a100f;
+      --cardBackground: #121717;
       --primary: #8af4f2;
-      --secondary: #0e3ca0;
+      /*--secondary: #0e3ca0;*/
+      --secondary: #0B1D3A;
       --accent: #00a1ff;
     }
+}
+.activeNavBar{
+  color: var(--accent);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');

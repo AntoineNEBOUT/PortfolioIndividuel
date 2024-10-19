@@ -13,6 +13,7 @@ module.exports = {
 		colors: {
 			'text': 'var(--text)',
 			'background': 'var(--background)',
+			'cardBackground': 'var(--cardBackground)',
 			'primary': 'var(--primary)',
 			'secondary': 'var(--secondary)',
 			'accent': 'var(--accent)',
