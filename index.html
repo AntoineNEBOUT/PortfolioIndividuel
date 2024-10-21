@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
 
     <title>Antoine Nebout - Portfolio</title>
 </head>
-<body class="bg-background scroll-smooth overflow-x-hidden">
+<body class="bg-background overflow-x-hidden">
     <div class="fixed bottom-4 left-4">
         <span class="sm:hidden">XS</span>
         <span class="hidden sm:block md:hidden">SM</span>
@@ -38,7 +38,7 @@
                 <img src="images\others\menuLight.svg" alt="icône du menu">
             </button>
         </nav> -->
-        <nav class="bg-opacity-50 backdrop-blur-md  p-4 rounded flex justify-between items-center mt-3 lg:gap-28 md:gap-20 max-md:w-3/4">
+        <nav class="bg-opacity-50 backdrop-blur-md p-4 rounded flex justify-between items-center mt-3 lg:gap-28 md:gap-20 max-md:w-3/4">
             <button id="theme_toggle" type="button" class="group text-text md:flex md:justify-between md:items-center rounded-full border border-text hover:bg-text hover:text-background">
                 <span class="max-md:hidden md:p-1 md:pl-2">Assombrir</span>
                 <div class="p-2 md:p-1 md:pr-2 dark:p-0 dark:md:p-0 dark:md:pr-0 dark:hidden group-hover:p-0 group-hover:md:p-0 group-hover:md:pr-0 group-hover:hidden dark:group-hover:p-2 dark:group-hover:md:p-1 dark:group-hover:md:pr-2 dark:group-hover:block">
@@ -63,14 +63,14 @@
             <button type="button" onclick="window.location.href='pages\\contact.html';" class="text-text max-md:hover:opacity-75 max-md:active:text-accent md:rounded md:p-1 md:text-background md:bg-text md:px-2 md:hover:text-text md:hover:bg-background md:border md:border-text md:hover:border-dashed md:active:border-solid">
                 Contacter
             </button>
-            <button type="button" class="md:hidden">
-                <div class="dark:hidden">
-                    <img src="../images\others\menuLight.svg" alt="icône du menu">
+            <label class="md:hidden">
+                <div class="w-9 h-10 cursor-pointer flex flex-col items-center justify-center">
+                    <input class="hidden peer" type="checkbox"/>
+                    <div class="w-[50%] h-[2px] bg-text rounded-sm transition-all duration-300 origin-left translate-y-[0.45rem] peer-checked:rotate-[-45deg]"></div>
+                    <div class="w-[50%] h-[2px] bg-text rounded-md transition-all duration-300 origin-center peer-checked:hidden"></div>
+                    <div class="w-[50%] h-[2px] bg-text rounded-md transition-all duration-300 origin-left -translate-y-[0.45rem] peer-checked:rotate-[45deg]"></div>
                 </div>
-                <div class="hidden dark:block">
-                    <img src="../images\others\menuDark.svg" alt="icône du menu">
-                </div>
-            </button>
+            </label>
         </nav>
     </header>
     <main>
