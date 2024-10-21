@@ -19,7 +19,7 @@
         <span class="hidden 2xl:block 3xl:hidden">2XL</span>
     </div>
 
-    <header class="flex justify-center fixed top-0 w-full z-50">
+    <header class="flex flex-col items-center fixed top-0 w-full z-50">
         <!-- <nav class="bg-opacity-50 backdrop-blur-md p-4 shadow-md rounded flex justify-between items-center mt-3 lg:gap-28 md:gap-20 max-md:w-3/4">
             <button id="theme_toggle" type="button" class="md:flex md:justify-between md:items-center rounded-full border border-text dark:border-background">
                 <span class="max-md:hidden md:p-1 md:pl-2 text-text dark:text-background">Assombrir</span>
@@ -60,18 +60,29 @@
             <button type="button" class="text-text max-md:underline-offset-8 max-md:hover:underline decoration-secondary active:text-accent dark:active:text-accent md:hidden">
                 À propos
             </button> -->
-            <button type="button" onclick="window.location.href='pages\\contact.html';" class="text-text max-md:hover:opacity-75 max-md:active:text-accent md:rounded md:p-1 md:text-background md:bg-text md:px-2 md:hover:text-text md:hover:bg-background md:border md:border-text md:hover:border-dashed md:active:border-solid">
+            <button type="button" onclick="window.location.href='pages\\contact.html';" class="max-md:hidden md:rounded md:p-1 md:text-background md:bg-text md:px-2 md:hover:text-text md:hover:bg-background md:border md:border-text md:hover:border-dashed md:active:border-solid">
                 Contacter
             </button>
+
             <label class="md:hidden">
                 <div class="w-9 h-10 cursor-pointer flex flex-col items-center justify-center">
-                    <input class="hidden peer" type="checkbox"/>
+                    <input id="togglePopup" class="hidden peer" type="checkbox"/>
                     <div class="w-[50%] h-[2px] bg-text rounded-sm transition-all duration-300 origin-left translate-y-[0.45rem] peer-checked:rotate-[-45deg]"></div>
                     <div class="w-[50%] h-[2px] bg-text rounded-md transition-all duration-300 origin-center peer-checked:hidden"></div>
                     <div class="w-[50%] h-[2px] bg-text rounded-md transition-all duration-300 origin-left -translate-y-[0.45rem] peer-checked:rotate-[45deg]"></div>
                 </div>
             </label>
         </nav>
+        
+        <div id="menuMobilePopup" class="p-6 rounded md:hidden hidden">
+            <ul class="flex flex-col justify-center items-center gap-2 bg-background rounded p-6 text-lg">
+                <li><a class="m-2 text-text hover:opacity-75" href="index.html#about_me">À propos</a></li>
+                <li><a class="m-2 text-text hover:opacity-75" href="index.html#skills">Compétences</a></li>
+                <li><a class="m-2 text-text hover:opacity-75" href="index.html#education_and_experience">Expériences</a></li>
+                <li><a class="m-2 text-text hover:opacity-75" href="index.html#projects">Projets</a></li>
+                <li><a class="m-2 text-text hover:opacity-75" href="pages/contact.html#">Contact</a></li>
+            </ul>
+        </div>
     </header>
     <main>
         <section id="about_me" class="flex justify-center items-center xl:h-dvh max-xl:mt-24">
@@ -335,6 +346,27 @@
     </main>
     <script src="js/navbar.js"></script>
     <script src="js/darkMode.js"></script>
+    <script>
+        export default {
+            data() {
+                return {
+                    isOpen: false,
+                }
+            },
+        }
+    </script>
+    <script>
+        document.getElementById('togglePopup').addEventListener('change', function() {
+          var element = document.getElementById('menuMobilePopup');
+          if (this.checked) {
+            element.classList.remove('hidden');
+          } else {
+            element.classList.add('hidden');
+          }
+        });
+      </script>
+      
+      
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
