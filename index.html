@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script src="js/darkMode.js" async></script>
+
     <link href="css\tailwind.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <link rel="icon" href="icon\profile.ico">
+
     <title>Antoine Nebout - Portfolio</title>
 </head>
-<body class="bg-background overflow-x-hidden">
+<body id="bodyIndex" class="bg-background overflow-x-hidden">
     <div class="fixed bottom-4 left-4">
         <span class="sm:hidden">XS</span>
         <span class="hidden sm:block md:hidden">SM</span>
@@ -19,7 +23,7 @@
         <span class="hidden 2xl:block 3xl:hidden">2XL</span>
     </div>
 
-    <header class="flex flex-col items-center fixed top-0 w-full z-50">
+    <header class="flex flex-col items-center fixed top-0 w-full z-50 max-xl:h-full gap-0">
         <!-- <nav class="bg-opacity-50 backdrop-blur-md p-4 shadow-md rounded flex justify-between items-center mt-3 lg:gap-28 md:gap-20 max-md:w-3/4">
             <button id="theme_toggle" type="button" class="md:flex md:justify-between md:items-center rounded-full border border-text dark:border-background">
                 <span class="max-md:hidden md:p-1 md:pl-2 text-text dark:text-background">Assombrir</span>
@@ -40,7 +44,8 @@
         </nav> -->
         <nav class="bg-opacity-50 backdrop-blur-md p-4 rounded flex justify-between items-center mt-3 lg:gap-28 md:gap-20 max-md:w-3/4">
             <button id="theme_toggle" type="button" class="group text-text md:flex md:justify-between md:items-center rounded-full border border-text hover:bg-text hover:text-background">
-                <span class="max-md:hidden md:p-1 md:pl-2">Assombrir</span>
+                <span class="max-md:hidden md:p-1 md:pl-2 dark:hidden">Assombrir</span>
+                <span class="max-md:hidden md:p-1 md:pl-2 hidden dark:block">Eclaircir</span>
                 <div class="p-2 md:p-1 md:pr-2 dark:p-0 dark:md:p-0 dark:md:pr-0 dark:hidden group-hover:p-0 group-hover:md:p-0 group-hover:md:pr-0 group-hover:hidden dark:group-hover:p-2 dark:group-hover:md:p-1 dark:group-hover:md:pr-2 dark:group-hover:block">
                     <img src="../images\others\moon.svg" alt="icône de lune">
                 </div>
@@ -54,13 +59,7 @@
                 <li><a class="max-md:hidden max-md:m-0 m-2 text-text hover:opacity-75" href="../index.html#education_and_experience">Expériences</a></li>
                 <li><a class="max-md:hidden max-md:m-0 m-2 text-text hover:opacity-75" href="../index.html#projects">Projets</a></li>
             </ul>
-            <!-- <button type="button" onclick="window.location.href='pages\\contact.html';" class="text-text max-md:hidden active:bg-text active:text-background md:rounded md:p-1 md:border md:border-text md:px-2 md:hover:border-dashed">
-                Contacter
-            </button>
-            <button type="button" class="text-text max-md:underline-offset-8 max-md:hover:underline decoration-secondary active:text-accent dark:active:text-accent md:hidden">
-                À propos
-            </button> -->
-            <button type="button" onclick="window.location.href='pages\\contact.html';" class="max-md:hidden md:rounded md:p-1 md:text-background md:bg-text md:px-2 md:hover:text-text md:hover:bg-background md:border md:border-text md:hover:border-dashed md:active:border-solid">
+            <button type="button" onclick="window.location.href='pages\\contact.html';" class="text-text text-lg max-md:hover:opacity-75 md:text-base md:rounded md:p-1 md:text-background md:bg-text md:px-2 md:hover:text-text md:hover:bg-background md:border md:border-text md:hover:border-dashed md:active:border-solid">
                 Contacter
             </button>
 
@@ -74,14 +73,11 @@
             </label>
         </nav>
         
-        <div id="menuMobilePopup" class="p-6 rounded md:hidden hidden">
-            <ul class="flex flex-col justify-center items-center gap-2 bg-background rounded p-6 text-lg">
-                <li><a class="m-2 text-text hover:opacity-75" href="index.html#about_me">À propos</a></li>
-                <li><a class="m-2 text-text hover:opacity-75" href="index.html#skills">Compétences</a></li>
-                <li><a class="m-2 text-text hover:opacity-75" href="index.html#education_and_experience">Expériences</a></li>
-                <li><a class="m-2 text-text hover:opacity-75" href="index.html#projects">Projets</a></li>
-                <li><a class="m-2 text-text hover:opacity-75" href="pages/contact.html#">Contact</a></li>
-            </ul>
+        <div id="menuMobilePopup" class="bg-opacity-50 backdrop-blur-md rounded p-6 md:hidden hidden w-full h-full flex flex-col justify-center items-center gap-2 text-lg mt-2">
+            <a class="m-2 text-text hover:opacity-75" href="index.html#about_me">À propos</a>
+            <a class="m-2 text-text hover:opacity-75" href="index.html#skills">Compétences</a>
+            <a class="m-2 text-text hover:opacity-75" href="index.html#education_and_experience">Expériences</a>
+            <a class="m-2 text-text hover:opacity-75" href="index.html#projects">Projets</a>
         </div>
     </header>
     <main>
@@ -94,7 +90,7 @@
                     <div class="text-text my-3 max-md:text-center md:text-justify">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </div>
-                    <button type="button" class="rounded bg-primary text-background py-2 px-3 active:bg-background active:text-primary active:border-solid border border-primary font-sans transform transition-transform duration-300 hover:scale-105">
+                    <button type="button" class="max-md:mb-3 rounded bg-primary text-background py-2 px-3 active:bg-background active:text-primary active:border-solid border border-primary font-sans transform transition-transform duration-300 hover:scale-105">
                         Télécharger mon CV
                     </button>
                 </div>
@@ -132,8 +128,10 @@
                     <!-- <h3 class="text-text text-center font-bold font-sans text-2xl mb-4">
                         Outils
                     </h3> -->
-                    <div class="flex justify-center items-center flex-wrap gap-7">
-                        <img src="images\skillsPictures\tools\github-light.svg" alt="icône github" class="w-auto h-12 transform transition-transform duration-200 hover:scale-125">
+                    <div class="flex justify-center items-center flex-wrap gap-7">                        
+                        <img src="..\images\others\Github_light.svg" alt="icône de GitHub" class="w-auto h-12 transform transition-transform duration-200 hover:scale-125 rounded dark:hidden">
+                        <img src="..\images\others\Github_dark.svg" alt="icône de GitHub" class="hidden w-auto h-12 transform transition-transform duration-200 hover:scale-125 rounded dark:block">
+
                         <img src="images\skillsPictures\tools\vscode.svg" alt="icône visual studio code" class="w-auto h-12 transform transition-transform duration-200 hover:scale-125">
                         <img src="images\skillsPictures\tools\intellijidea.svg" alt="icône intellij idea" class="w-auto h-12 transform transition-transform duration-200 hover:scale-125">
                         <img src="images\skillsPictures\tools\notion.svg" alt="icône notion" class="w-auto h-12 transform transition-transform duration-200 hover:scale-125">
@@ -301,14 +299,15 @@
                     <h4 class="text-text text-center font-bold font-sans text-xl">
                         Portfolio personnel
                     </h4>
-                    <div class="flex justify-center hover:opacity-80">
+                    <div class="flex justify-center hover:opacity-80 dark:hover:opacity-50">
                         <img src="images\projectsPictures\portfolioLogo.avif" alt="logo du portfolio personnel" class="w-1/2 md:w-40 h-auto rounded">
                     </div>
                     <div class="flex justify-center items-center flex-wrap gap-4">
                         <img src="images\skillsPictures\programmingLangages\html5.svg" alt="icône html" class="w-auto h-10 transform transition-transform duration-200 hover:scale-125">
                         <img src="images\skillsPictures\frameworks\tailwindcss.svg" alt="icône tailwindcss" class="w-auto h-10 transform transition-transform duration-200 hover:scale-125">
                         <img src="images\skillsPictures\tools\vscode.svg" alt="icône visual studio code" class="w-auto h-10 transform transition-transform duration-200 hover:scale-125">
-                        <img src="images\skillsPictures\tools\github-light.svg" alt="icône github" class="w-auto h-10 transform transition-transform duration-200 hover:scale-125">
+                        <img src="..\images\others\Github_light.svg" alt="icône de GitHub" class="w-auto h-10 transform transition-transform duration-200 hover:scale-125 rounded dark:hidden">
+                        <img src="..\images\others\Github_dark.svg" alt="icône de GitHub" class="hidden w-auto h-10 transform transition-transform duration-200 hover:scale-125 rounded dark:block">
                     </div>
                 </div>
     
@@ -317,7 +316,7 @@
                     <h4 class="text-text text-center font-bold font-sans text-xl">
                         Site vitrine pour une équipe d'esport
                     </h4>
-                    <div class="flex justify-center hover:opacity-80">
+                    <div class="flex justify-center hover:opacity-80 dark:hover:opacity-50">
                         <img src="images\projectsPictures\g4EsportLyonLogo.png" alt="logo dde l'Institut G4" class="w-1/2 md:w-40 h-auto rounded">
                     </div>
                     <div class="flex items-center flex-wrap gap-4">
@@ -331,30 +330,21 @@
                     <h4 class="text-text text-center font-bold font-sans text-xl">
                         Gestionnaire de tournoi - Les Trophées NSI 2024
                     </h4>
-                    <div class="flex justify-center hover:opacity-80">
+                    <div class="flex justify-center hover:opacity-80 dark:hover:opacity-50">
                         <img src="images\projectsPictures\olympicTournamentImage.avif" alt="logo des Trophées NSI 2024" class="w-1/2 md:w-40 h-auto rounded">
                     </div>
                     <div class="flex items-center flex-wrap gap-4">
                         <img src="images\skillsPictures\programmingLangages\python.svg" alt="icône python"   class="w-auto h-10 transform transition-transform duration-200 hover:scale-125">
                         <img src="images\skillsPictures\frameworks\qt.svg" alt="icône qt"   class="w-auto h-10 transform transition-transform duration-200 hover:scale-125">
                         <img src="images\skillsPictures\tools\vscode.svg" alt="icône visual studio code"   class="w-auto h-10 transform transition-transform duration-200 hover:scale-125">
-                        <img src="images\skillsPictures\tools\github-light.svg" alt="icône github"   class="w-auto h-10 transform transition-transform duration-200 hover:scale-125">
+                        <img src="..\images\others\Github_light.svg" alt="icône de GitHub" class="w-auto h-10 transform transition-transform duration-200 hover:scale-125 rounded dark:hidden">
+                        <img src="..\images\others\Github_dark.svg" alt="icône de GitHub" class="hidden w-auto h-10 transform transition-transform duration-200 hover:scale-125 rounded dark:block">
                     </div>
                 </div>
             </div>
         </section>
     </main>
     <script src="js/navbar.js"></script>
-    <script src="js/darkMode.js"></script>
-    <script>
-        export default {
-            data() {
-                return {
-                    isOpen: false,
-                }
-            },
-        }
-    </script>
     <script>
         document.getElementById('togglePopup').addEventListener('change', function() {
           var element = document.getElementById('menuMobilePopup');
@@ -364,9 +354,7 @@
             element.classList.add('hidden');
           }
         });
-      </script>
-      
-      
+    </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
