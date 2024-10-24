@@ -23,7 +23,7 @@
         <span class="hidden 2xl:block 3xl:hidden">2XL</span>
     </div>
 
-    <header class="flex flex-col items-center fixed top-0 w-full z-50 max-xl:h-full gap-0">
+    <header class="flex flex-col items-center fixed top-0 w-full z-50 gap-0">
         <!-- <nav class="bg-opacity-50 backdrop-blur-md p-4 shadow-md rounded flex justify-between items-center mt-3 lg:gap-28 md:gap-20 max-md:w-3/4">
             <button id="theme_toggle" type="button" class="md:flex md:justify-between md:items-center rounded-full border border-text dark:border-background">
                 <span class="max-md:hidden md:p-1 md:pl-2 text-text dark:text-background">Assombrir</span>
@@ -86,7 +86,7 @@
                 <div class="rounded flex max-md:flex-col-reverse max-md:gap-5 justify-end items-center md:justify-center md:items-center w-full h-full bg-primary25 border-primary border shadow-md absolute max-md:right-4 max-md:top-4 md:right-6 md:top-6" data-aos="fade-up-right"
                 data-aos-duration="1000">
                 </div>  
-                <div class="bg-opacity-50 backdrop-blur-md rounded border border-primary p-3" data-aos="fade-down-left"
+                <div class="bg-opacity-50 backdrop-blur-md rounded border border-primary p-3 shadow-md" data-aos="fade-down-left"
                 data-aos-duration="1000">
                     <img src="images\profilePictures\chemiseBleuFonce1RBG.png" alt="Photo de profil" class="scale-x-[-1]">
                 </div>
@@ -232,7 +232,13 @@
             </div>
         </section>
 
-        <section id="education_and_experience" class="xl:h-dvh">
+        <section id="education_and_experience" class="3xl:h-dvh">
+            <!--
+            - Grossir le titre
+            - Enlever le gras du sous-titre
+            - Mettre la période avec une couleur
+
+            -->
             <div class=" flex justify-center items-center">
                 <h2 class="text-text text-center font-bold font-sans text-3xl my-24 z-40">
                     Formations & Expériences
@@ -245,91 +251,112 @@
                         Formations
                     </h3>
 
-                    <div class="border border-primary shadow-md flex flex-col-reverse items-center justify-center xl:flex-row xl:justify-center p-6 rounded gap-4">
-                        <div class="flex flex-col gap-4 xl:w-2/3">
-                            <h4 class="text-text font-bold font-sans text-xl text-center xl:text-left">
-                                Bachelor Conception & Développement d'Applications
-                            </h4>
-                            <h5 class="text-text font-semibold font-sans text-lg text-center xl:text-left">
-                                Institut G4
-                            </h5>
-                            <h6 class="text-text font-semibold font-sans text-base text-center xl:text-left">
-                                Septembre 2024 à aujoud'hui
-                            </h6>
-                            <!-- <p class="text-text text-justify">
-                                J’ai préparé un baccalauréat général au Lycée Notre Dame de Mongré à Villefranche-sur-Saône entre septembre 2022 et juin 2024. 
-                                À cette période, j’ai suivi les spécialités Mathématiques et Numérique et Sciences Informatiques. Grâce à ces enseignements, 
-                                j’ai notamment pu développer ma capacité d’analyse et ma logique algorithmique.
-                            </p> -->
-                        </div>
-                        <div>
-                            <img src="images\educationPicture\g4Logo.png" alt="image de ND De Mongré" class="w-auto h-36 rounded">
+                    <div class="relative">
+                        <div class="rounded w-3/4 h-1/2 bg-primary25 border-primary border shadow-md absolute right-0 left-0 bottom-0 top-0 m-auto"></div>
+                        <div class="flex flex-col-reverse items-center justify-center rounded gap-4">
+                            <div class="flex flex-col gap-4 w-full bg-opacity-50 backdrop-blur-md border border-primary rounded p-4">
+                                <h4 class="text-text font-bold font-sans text-2xl text-center">
+                                    Développeur web
+                                </h4>
+                                <h5 class="text-text font-sans text-lg text-center">
+                                    Institut G4 Lyon - Bachelor
+                                </h5>
+                                <h6 class="text-primary font-sans text-base text-center">
+                                    Septembre 2024 à aujoud'hui
+                                </h6>
+                            </div>
+                            <div class="flex items-center bg-opacity-50 backdrop-blur-md border border-primary rounded p-4 w-36 h-36">
+                                <img src="images\educationPicture\g4Logo.png" alt="image de ND De Mongré" class="rounded">
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="flex flex-col-reverse items-center justify-center xl:flex-row xl:justify-center shadow-md border border-primary p-6 rounded gap-4">
-                        <div class="flex flex-col gap-4 xl:w-2/3">
-                            <h4 class="text-text font-bold font-sans text-xl text-center xl:text-left">
-                                Baccalauréat Général
-                            </h4>
-                            <h5 class="text-text font-semibold font-sans text-lg text-center xl:text-left">
-                                Lycée Notre Dame de Mongré
-                            </h5>
-                            <h6 class="text-text font-semibold font-sans text-base text-center xl:text-left">
-                                Septembre 2023 - Juin 2024
-                            </h6>
-                            <!-- <p class="text-text text-justify">
-                                J’ai préparé un baccalauréat général au Lycée Notre Dame de Mongré à Villefranche-sur-Saône entre septembre 2022 et juin 2024. 
-                                À cette période, j’ai suivi les spécialités Mathématiques et Numérique et Sciences Informatiques. Grâce à ces enseignements, 
-                                j’ai notamment pu développer ma capacité d’analyse et ma logique algorithmique.
-                            </p> -->
+                    <div class="relative">
+                        <div class="rounded w-3/4 h-1/2 bg-primary25 border-primary border shadow-md absolute right-0 left-0 bottom-0 top-0 m-auto"></div>
+                        <div class="flex flex-col-reverse items-center justify-center gap-4">
+                            <div class="flex flex-col gap-4 w-full bg-opacity-50 backdrop-blur-md border border-primary rounded p-4">
+                                <h4 class="text-text font-bold font-sans text-2xl text-center">
+                                    Baccalauréat Général
+                                </h4>
+                                <h5 class="text-text font-sans text-lg text-center">
+                                    Lycée Notre Dame de Mongré
+                                </h5>
+                                <h6 class="text-primary font-sans text-base text-center">
+                                    Septembre 2023 - Juin 2024
+                                </h6>
+                            </div>
+                            <div class="flex items-center bg-opacity-50 backdrop-blur-md border border-primary rounded p-4 w-36 h-36">
+                                <img src="images\educationPicture\school.avif" alt="image de ND De Mongré" class="rounded">
+                            </div>
+                            
                         </div>
-                        <img src="images\educationPicture\school.avif" alt="image de ND De Mongré" class="w-auto h-36 rounded">
                     </div>
                 </div>
 
-                <div class="flex flex-col gap-4 w-3/4 md:w-2/3 justify-self-center lg:justify-self-start">
+                <div class="flex flex-col gap-4 w-3/4 md:w-2/3 justify-between justify-self-center lg:justify-self-start">
                     <h3 class="text-text text-center font-bold font-sans text-2xl">
                         Expériences
                     </h3>
     
-                    <div class="flex flex-col-reverse items-center justify-center xl:flex-row xl:justify-center border border-primary shadow-md p-6 rounded gap-4 h-full">
+                    <!-- <div class="flex flex-col-reverse items-center justify-center xl:flex-row xl:justify-center border border-primary shadow-md p-6 rounded gap-4 h-full">
                         <div class="flex flex-col gap-4 xl:w-2/3">
-                            <h4 class="text-text font-bold font-sans text-xl text-center xl:text-left">
+                            <h4 class="text-text font-bold font-sans text-2xl text-center xl:text-left">
                                 Alternant Informatique
                             </h4>
-                            <h5 class="text-text font-semibold font-sans text-lg text-center xl:text-left">
+                            <h5 class="text-text font-sans text-lg text-center xl:text-left">
                                 Technicentre TGV de Lyon
                             </h5>
-                            <h6 class="text-text font-semibold font-sans text-base text-center xl:text-left">
+                            <h6 class="text-primary font-sans text-base text-center xl:text-left">
                                 Septembre 2024 à aujoud'hui
                             </h6>
-                            <!-- <p class="text-text text-justify">
-                                Je réalise actuellement cette alternance en parallèle de mes études à l’Institut G4.
-                                Je réalise principalement de la correction de tickets liés à des dysfonctionnements logiciels.
-                                Je travaille parfois sur la réalisation de projets complets répondant à un besoin précis.
-                            </p> -->
                         </div>
                         <img src="images\experiencePicture\sncf.avif" alt="logo technicentre lyon" class="w-auto h-36 rounded">
+                    </div> -->
+
+                    <div class="relative">
+                        <div class="rounded w-3/4 h-1/2 bg-primary25 border-primary border shadow-md absolute right-0 left-0 bottom-0 top-0 m-auto"></div>
+                        <div class="flex flex-col-reverse items-center justify-center gap-4 h-full">
+                            <div class="flex flex-col gap-4 w-full bg-opacity-50 backdrop-blur-md border border-primary rounded p-4">
+                                <h4 class="text-text font-bold font-sans text-2xl text-center">
+                                    Alternant Informatique
+                                </h4>
+                                <h5 class="text-text font-sans text-lg text-center">
+                                    Technicentre TGV de Lyon
+                                </h5>
+                                <h6 class="text-primary font-sans text-base text-center">
+                                    Septembre 2024 à aujoud'hui
+                                </h6>
+                            </div>
+                            <div class="flex items-center bg-opacity-50 backdrop-blur-md border border-primary rounded p-4 w-36 h-36">
+                                <img src="images\experiencePicture\sncf.avif" alt="logo technicentre lyon" class="rounded">
+                            </div>
+                            
+                        </div>
                     </div>
     
-                    <div class="flex flex-col-reverse items-center justify-center xl:flex-row xl:justify-center bg-primary25 border border-primary shadow-md p-6 rounded gap-4">
-                        <div class="flex flex-col gap-4 xl:w-2/3">
-                            <h4 class="text-text font-bold font-sans text-xl text-center xl:text-left">
-                                Stage d'observation
-                            </h4>
-                            <h5 class="text-text font-semibold font-sans text-lg text-center xl:text-left">
-                                ENEDIS Lyon
-                            </h5>
-                            <h6 class="text-text font-semibold font-sans text-base text-center xl:text-left">
-                                Juin 2022
-                            </h6>
-                            <!-- <p class="text-text text-justify">
-                                Ce stage d’observation m’a fait découvrir le monde professionnel du développement et de la gestion de projet. 
-                                C’est à cette occasion que j’ai découvert l’organisation d’une telle équipe et les différents rôles qui la composent.
-                            </p> -->
+                    <div class="relative">
+                        <div class="rounded w-3/4 h-1/2 bg-primary25 border-primary border shadow-md absolute right-0 left-0 bottom-0 top-0 m-auto"></div>
+                        <div class="flex flex-col-reverse items-center justify-center  gap-4">
+                            <div class="flex flex-col gap-4 w-full bg-opacity-50 backdrop-blur-md border border-primary rounded p-4">
+                                <h4 class="text-text font-bold font-sans text-2xl text-center">
+                                    Stage d'observation
+                                </h4>
+                                <h5 class="text-text font-sans text-lg text-center">
+                                    ENEDIS Lyon
+                                </h5>
+                                <h6 class="text-primary font-sans text-base text-center">
+                                    Juin 2022
+                                </h6>
+                                <!-- <p class="text-text text-justify">
+                                    Ce stage d’observation m’a fait découvrir le monde professionnel du développement et de la gestion de projet. 
+                                    C’est à cette occasion que j’ai découvert l’organisation d’une telle équipe et les différents rôles qui la composent.
+                                </p> -->
+                            </div>
+                            <div class="flex items-center bg-opacity-50 backdrop-blur-md border border-primary rounded p-4 w-36 h-36">
+                                <img src="images\experiencePicture\enedis.avif" alt="logo endis" class="rounded">
+                            </div>
+                            
                         </div>
-                        <img src="images\experiencePicture\enedis.avif" alt="logo endis" class="w-auto h-36 rounded">
                     </div>
                 </div>
             </div>
@@ -373,29 +400,63 @@
                 <img src="images\projectsPictures\portfolioLogo.avif" alt="logo du portfolio">
             </div> -->
             
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center gap-6">
-                <div class="bg-cardBackground drop-shadow-md p-6 flex flex-col justify-between items-center flex-wrap gap-4 w-3/4 sm:w-72 h-auto rounded" data-aos="fade-right"
-                data-aos-duration="1000">
-                    <h4 class="text-text text-center font-bold font-sans text-xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-6">
+                <div class="relative w-3/4 md:w-full h-auto">
+                    <div class="rounded flex max-md:flex-col-reverse max-md:gap-5 justify-end items-center md:justify-center md:items-center w-full h-full bg-primary25 border-primary border shadow-md absolute right-4 bottom-4"></div>
+                    <div class="flex flex-col justify-between items-center gap-4 flex-wrap w-full h-full rounded border border-primary bg-opacity-50 backdrop-blur-md py-4">
+                        <h3 class="text-text text-center font-bold font-sans text-2xl">
+                            Portfolio personnel
+                        </h3>
+                        <div class="flex justify-center">
+                            <img src="images\projectsPictures\portfolioLogo.avif" alt="logo du portfolio personnel" class="w-1/2 md:w-40 h-auto rounded">
+                        </div>
+                        <div class="flex justify-center items-center flex-wrap gap-4">
+                            <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12">
+                                <img src="images\skillsPictures\programmingLangages\html5.svg" alt="icône html">
+                            </div>
+                            <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12">
+                                <img src="images\skillsPictures\frameworks\tailwindcss.svg" alt="icône tailwindcss">
+                            </div>
+                            <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12">
+                                <img src="images\skillsPictures\tools\vscode.svg" alt="icône visual studio code">
+                            </div>
+                            <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12">
+                                <img src="..\images\others\Github_light.svg" alt="icône de GitHub" class="dark:hidden">
+                            <img src="..\images\others\Github_dark.svg" alt="icône de GitHub" class="hidden dark:block">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-between items-center flex-wrap w-3/4 sm:w-72 h-auto rounded border border-primary bg-opacity-50 backdrop-blur-md py-4">
+                    <h3 class="text-text text-center font-bold font-sans text-2xl">
                         Portfolio personnel
-                    </h4>
-                    <div class="flex justify-center hover:opacity-80 dark:hover:opacity-50">
+                    </h3>
+                    <div class="flex justify-center">
                         <img src="images\projectsPictures\portfolioLogo.avif" alt="logo du portfolio personnel" class="w-1/2 md:w-40 h-auto rounded">
                     </div>
                     <div class="flex justify-center items-center flex-wrap gap-4">
-                        <img src="images\skillsPictures\programmingLangages\html5.svg" alt="icône html" class="w-auto h-10 transform transition-transform duration-200 hover:scale-125">
-                        <img src="images\skillsPictures\frameworks\tailwindcss.svg" alt="icône tailwindcss" class="w-auto h-10 transform transition-transform duration-200 hover:scale-125">
-                        <img src="images\skillsPictures\tools\vscode.svg" alt="icône visual studio code" class="w-auto h-10 transform transition-transform duration-200 hover:scale-125">
-                        <img src="..\images\others\Github_light.svg" alt="icône de GitHub" class="w-auto h-10 transform transition-transform duration-200 hover:scale-125 rounded dark:hidden">
-                        <img src="..\images\others\Github_dark.svg" alt="icône de GitHub" class="hidden w-auto h-10 transform transition-transform duration-200 hover:scale-125 rounded dark:block">
+                        <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12">
+                            <img src="images\skillsPictures\programmingLangages\html5.svg" alt="icône html">
+                        </div>
+                        <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12">
+                            <img src="images\skillsPictures\frameworks\tailwindcss.svg" alt="icône tailwindcss">
+                        </div>
+                        <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12">
+                            <img src="images\skillsPictures\tools\vscode.svg" alt="icône visual studio code">
+                        </div>
+                        <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12">
+                            <img src="..\images\others\Github_light.svg" alt="icône de GitHub" class="dark:hidden">
+                        <img src="..\images\others\Github_dark.svg" alt="icône de GitHub" class="hidden dark:block">
+                        </div>
                     </div>
                 </div>
+                
     
-                <div class="bg-cardBackground drop-shadow-md p-6 flex flex-col justify-between items-center flex-wrap gap-4 w-3/4 sm:w-72 h-auto rounded" data-aos="fade-up"
-                data-aos-duration="1000">
-                    <h4 class="text-text text-center font-bold font-sans text-xl">
+                <div class="bg-cardBackground drop-shadow-md p-6 flex flex-col justify-between items-center flex-wrap gap-4 w-3/4 sm:w-72 h-auto rounded">
+                    <h3 class="text-text text-center font-bold font-sans text-2xl">
                         Site vitrine pour une équipe d'esport
-                    </h4>
+                    </h3>
                     <div class="flex justify-center hover:opacity-80 dark:hover:opacity-50">
                         <img src="images\projectsPictures\g4EsportLyonLogo.png" alt="logo dde l'Institut G4" class="w-1/2 md:w-40 h-auto rounded">
                     </div>
@@ -405,11 +466,10 @@
                     </div>
                 </div>
     
-                <div class="bg-cardBackground drop-shadow-md p-6 flex flex-col justify-between items-center flex-wrap gap-4 w-3/4 sm:w-72 h-auto rounded" data-aos="fade-left"
-                data-aos-duration="1000">
-                    <h4 class="text-text text-center font-bold font-sans text-xl">
+                <div class="bg-cardBackground drop-shadow-md p-6 flex flex-col justify-between items-center flex-wrap gap-4 w-3/4 sm:w-72 h-auto rounded">
+                    <h3 class="text-text text-center font-bold font-sans text-2xl">
                         Gestionnaire de tournoi - Les Trophées NSI 2024
-                    </h4>
+                    </h3>
                     <div class="flex justify-center hover:opacity-80 dark:hover:opacity-50">
                         <img src="images\projectsPictures\olympicTournamentImage.avif" alt="logo des Trophées NSI 2024" class="w-1/2 md:w-40 h-auto rounded">
                     </div>
@@ -434,8 +494,10 @@
           var element = document.getElementById('menuMobilePopup');
           if (this.checked) {
             element.classList.remove('hidden');
+            document.querySelector('header').classList.add('h-full');
           } else {
             element.classList.add('hidden');
+            document.querySelector('header').classList.remove('h-full');
           }
         });
     </script>
