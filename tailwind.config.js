@@ -15,6 +15,7 @@ module.exports = {
 			'background': 'var(--background)',
 			'cardBackground': 'var(--cardBackground)',
 			'primary': 'var(--primary)',
+			'primary25': 'var(--primary25)',
 			'secondary': 'var(--secondary)',
 			'accent': 'var(--accent)',
 			},
