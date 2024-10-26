@@ -68,11 +68,11 @@
             </label>
         </nav>
 
-        <div id="menuMobilePopup" class="bg-opacity-50 backdrop-blur-md rounded p-6 md:hidden hidden w-full h-full flex flex-col justify-center items-center gap-2 text-lg mt-2">
-            <a class="m-2 text-text hover:opacity-75" href="index.html#about_me">À propos</a>
-            <a class="m-2 text-text hover:opacity-75" href="index.html#skills">Compétences</a>
-            <a class="m-2 text-text hover:opacity-75" href="index.html#education_and_experience">Expériences</a>
-            <a class="m-2 text-text hover:opacity-75" href="index.html#projects">Projets</a>
+        <div id="menuMobilePopup" class="bg-cardBackground rounded p-6 md:hidden hidden w-3/4 h-4/5 flex flex-col justify-center items-center gap-2 text-lg mt-2">
+            <a class="m-2 text-text hover:opacity-75" href="../index.html#about_me">À propos</a>
+            <a class="m-2 text-text hover:opacity-75" href="../index.html#skills">Compétences</a>
+            <a class="m-2 text-text hover:opacity-75" href="../index.html#education_and_experience">Expériences</a>
+            <a class="m-2 text-text hover:opacity-75" href="../index.html#projects">Projets</a>
         </div>
     </header>
 
@@ -84,7 +84,7 @@
                 </h2>
             </div>
             <div class="md:flex md:justify-center mb-6">
-                <form action="" method="get" class="flex flex-col items-center gap-4">
+                <form action="/send-email" method="post" class="flex flex-col items-center gap-4">
                     <div id="nameCard" class="flex justify-center items-center border border-background bg-primary25 p-4 rounded w-3/4 h-fit md:w-4/5" data-aos="fade-right" data-aos-duration="1500">
                         <input type="text" name="name" id="name" placeholder="Nom" class="rounded-md w-full text-text font-sans p-1 bg-background outline-none z-40">
                     </div>
@@ -99,7 +99,8 @@
                         <textarea name="message" id="message" rows="5" cols="50" placeholder="Message" class="rounded-md w-full text-text font-sans p-1 bg-background outline-none"></textarea>
                     </div>
                     <div class="flex justify-center items-center hover:shadow-md w-1/3 rounded dark:hover:shadow-secondary" data-aos="fade-right" data-aos-duration="1500">
-                        <input type="submit" name="send" id="send" class="rounded-md w-full text-background bg-primary active:bg-background active:text-primary active:border-solid border border-primary font-sans p-3 transform transition-transform duration-300 hover:scale-105">
+                        <input type="button" onclick="sendEmail()" value="Envoyer" class="rounded-md w-full text-background bg-primary active:bg-background active:text-primary active:border-solid border border-primary font-sans p-3 transform transition-transform duration-300 hover:scale-105">
+                        <!-- <input type="submit" name="send" id="send" class="rounded-md w-full text-background bg-primary active:bg-background active:text-primary active:border-solid border border-primary font-sans p-3 transform transition-transform duration-300 hover:scale-105"> -->
                     </div>
                 </form>
             </div>
@@ -161,12 +162,34 @@
           if (this.checked) {
             element.classList.remove('hidden');
             document.querySelector('header').classList.add('h-full');
+            document.querySelector('nav').classList.add('bg-cardBackground');
           } else {
             element.classList.add('hidden');
             document.querySelector('header').classList.remove('h-full');
+            document.querySelector('nav').classList.remove('bg-cardBackground');
           }
         });
     </script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript">
+        function sendEmail() {
+            console.log("coucou");
+        Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "antoinenebout09@gmail.com",
+            Password : "C1B68501D05FE36F561CF9D3FE9A8CC761B1",
+            To : 'antoinenebout09@gmail.com',
+            From : 'antoinenebout09@gmail.com',
+            Subject : 'Nouveau message de votre formulaire de contact',
+            Body : "Nom : " + document.getElementById("name").value
+                + "<br>Adresse mail : " + document.getElementById("email").value
+                + "<br>Objet : " + document.getElementById("subject").value
+                + "<br>Message :<br>" + document.getElementById("message").value
+        }).then(
+          message => alert(message)
+        );
+        }
+    </script>        
     <script src="../js/formFocus.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
