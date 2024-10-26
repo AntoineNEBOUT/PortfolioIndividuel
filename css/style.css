@@ -10,8 +10,8 @@
       /* --cardBackground: #e4e4e4; */
       --primary: #0b7573;
       --primary25: #0b757332;
-      /*--secondary: #5f8ef1;*/
-      --secondary: #C4D5F2;
+      --secondary: #5f8ef1;
+      /* --secondary: #C4D5F2; */
       --accent: #00a1ff;
     }
     .dark {
@@ -20,13 +20,17 @@
       --cardBackground: #121717;
       --primary: #8af4f2;
       --primary25: #8af4f232;
-      /*--secondary: #0e3ca0;*/
-      --secondary: #0B1D3A;
+      --secondary: #0e3ca0;
+      /* --secondary: #0B1D3A; */
       --accent: #00a1ff;
     }
 }
 .activeNavBar{
-  color: var(--accent);
+  /* color: var(--secondary); */
+  text-decoration: underline;
+  text-decoration-color: var(--secondary);
+  text-underline-offset: 5px;
+  text-decoration-thickness: 3px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
