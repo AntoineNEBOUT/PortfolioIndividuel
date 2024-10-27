@@ -22,45 +22,50 @@
         <span class="hidden xl:block 2xl:hidden">XL</span>
         <span class="hidden 2xl:block 3xl:hidden">2XL</span>
     </div>
-    <!-- <div class="md:w-504 md:h-504 bg-secondary rounded-full fixed top-16 right-7 z-0"></div>
-    <div class="max-lg:hidden md:w-443 md:h-443 bg-accent rounded-full fixed top-3 left-16 z-0"></div>
-    <div class="md:w-281 md:h-281 lg:bg-secondary bg-accent rounded-full fixed bottom-4 md:left-20 z-0"></div> -->
 
+    <!-- Header de la page de contact -->
     <header class="flex flex-col items-center fixed top-0 w-full z-50">
+        <!-- NavBar de la page de contact -->
         <nav class="bg-opacity-50 backdrop-blur-md p-4 rounded flex justify-between items-center mt-3 lg:gap-28 md:gap-20 max-md:w-3/4">
-            <!-- <button id="theme_toggle" type="button" class="text-text md:flex md:justify-between md:items-center rounded-full border border-text">
-                <span class="max-md:hidden md:p-1 md:pl-2 text-text">Assombrir</span>
-                <img src="../images\others\moon.svg" alt="icône de lune" class="p-2 md:p-1 md:pr-2 dark:p-0 dark:md:p-0 dark:md:pr-0 dark:hidden">
-                <img src="../images\others\sun.svg" alt="icône de lune" class="hidden p-0 md:p-0 md:pr-0 dark:p-1 dark:md:p-2 dark:md:pr-2 dark:block">
-            </button> -->
+            <!-- Bouton pour le changement de thème -->
             <button id="theme_toggle" type="button" class="group text-text md:flex md:justify-between md:items-center rounded-full border border-text hover:bg-text hover:text-background">
+                <!-- Textes du bouton -->
                 <span class="hidden md:p-1 md:pl-2 md:dark:hidden md:block">Assombrir</span>
                 <span class="hidden md:p-1 md:pl-2 md:dark:block md:hidden">Eclaircir</span>
+
+                <!-- Div qui gère l'icône de lune -->
                 <div class="p-2 md:p-1 md:pr-2 dark:p-0 dark:md:p-0 dark:md:pr-0 dark:hidden group-hover:p-0 group-hover:md:p-0 group-hover:md:pr-0 group-hover:hidden dark:group-hover:p-2 dark:group-hover:md:p-1 dark:group-hover:md:pr-2 dark:group-hover:block">
                     <img src="../images\others\moon.svg" alt="icône de lune">
                 </div>
+
+                <!-- Div qui gère l'icône de soleil -->
                 <div class="hidden p-0 md:p-0 md:pr-0 dark:p-2 dark:md:p-1 dark:md:pr-2 dark:block dark:group-hover:p-0 dark:group-hover:md:p-0 dark:group-hover:md:pr-0 dark:group-hover:hidden group-hover:p-2 group-hover:md:p-1 group-hover:md:pr-2 group-hover:block">
-                    <img src="../images\others\sun.svg" alt="icône de lune">
+                    <img src="../images\others\sun.svg" alt="icône de soleil">
                 </div>
             </button>
+
+            <!-- Liste des liens de la page principale -->
             <ul class="md:flex max-md:hidden">
                 <li><a class="max-md:hidden max-md:m-0 m-2 text-text hover:opacity-75" href="../index.html#">À propos</a></li>
                 <li><a class="max-md:hidden max-md:m-0 m-2 text-text hover:opacity-75" href="../index.html#skills">Compétences</a></li>
                 <li><a class="max-md:hidden max-md:m-0 m-2 text-text hover:opacity-75" href="../index.html#education_and_experience">Expériences</a></li>
                 <li><a class="max-md:hidden max-md:m-0 m-2 text-text hover:opacity-75" href="../index.html#projects">Projets</a></li>
             </ul>
-            <button type="button" class="text-text max-md:hidden active:bg-text active:text-background md:rounded md:p-1 md:border md:border-text md:px-2 md:hover:border-dashed">
+
+            <!-- Bouton contacter -->
+            <button type="button" onclick="window.location.reload();" class="text-text max-md:hidden active:bg-text active:text-background md:rounded md:p-1 md:border md:border-text md:px-2 md:hover:border-dashed">
                 Contacter
             </button>
-            <!-- <button type="button" class="text-text dark:text-background max-md:underline-offset-8 max-md:hover:underline decoration-secondary active:text-accent dark:active:text-accent md:hidden">
-                À propos
-            </button> -->
-            <button type="button" onclick="window.location.href='..\\index.html';" class="text-text text-lg hover:opacity-75 md:hidden">
-                À propos
+
+            <!-- Bouton de retour sur la page principale pour les appareils mobiles -->
+            <button type="button" onclick="window.location.href='..\\index.html#';" class="text-text text-lg hover:opacity-75 md:hidden">
+                Retour
             </button>
+
+            <!-- Menu burger pour les appareils mobiles provient de : https://uiverse.io/Shubh0408/pink-cobra-51 -->
             <label class="md:hidden">
                 <div class="w-9 h-10 cursor-pointer flex flex-col items-center justify-center">
-                    <input id="togglePopup" class="hidden peer" type="checkbox"/>
+                    <input id="toggle_popup" class="hidden peer" type="checkbox"/>
                     <div class="w-[50%] h-[2px] bg-text rounded-sm transition-all duration-300 origin-left translate-y-[0.45rem] peer-checked:rotate-[-45deg]"></div>
                     <div class="w-[50%] h-[2px] bg-text rounded-md transition-all duration-300 origin-center peer-checked:hidden"></div>
                     <div class="w-[50%] h-[2px] bg-text rounded-md transition-all duration-300 origin-left -translate-y-[0.45rem] peer-checked:rotate-[45deg]"></div>
@@ -68,7 +73,8 @@
             </label>
         </nav>
 
-        <div id="menuMobilePopup" class="bg-cardBackground rounded p-6 md:hidden hidden w-3/4 h-4/5 flex flex-col justify-center items-center gap-2 text-lg mt-2">
+        <!-- Menu mobile sous la forme d'une popup activable/désactivable -->
+        <div id="menu_mobile_popup" class="bg-cardBackground rounded p-6 md:hidden hidden w-3/4 h-4/5 flex-col justify-center items-center gap-2 text-lg mt-2">
             <a class="m-2 text-text hover:opacity-75" href="../index.html#about_me">À propos</a>
             <a class="m-2 text-text hover:opacity-75" href="../index.html#skills">Compétences</a>
             <a class="m-2 text-text hover:opacity-75" href="../index.html#education_and_experience">Expériences</a>
@@ -76,121 +82,122 @@
         </div>
     </header>
 
+    <!-- Main de la page de contact -->
     <main>
+        <!-- Section contenant le formulaire de contact -->
         <section id="contact" class="mt-20">
+            <!-- Div qui gère le titre de la section -->
             <div class=" flex justify-center items-center">
                 <h2 class="text-text text-center font-bold font-sans text-3xl my-5 z-40">
                     Contact
                 </h2>
             </div>
+
+            <!-- Div qui contient le formulaire de contact -->
             <div class="md:flex md:justify-center mb-6">
-                <form action="/send-email" method="post" class="flex flex-col items-center gap-4">
+                <!-- Formulaire de contact -->
+                <form id="contact_form" class="flex flex-col items-center gap-4">
+                    <!-- Div qui gère le champ du nom -->
                     <div id="nameCard" class="flex justify-center items-center border border-background bg-primary25 p-4 rounded w-3/4 h-fit md:w-4/5" data-aos="fade-right" data-aos-duration="1500">
-                        <input type="text" name="name" id="name" placeholder="Nom" class="rounded-md w-full text-text font-sans p-1 bg-background outline-none z-40">
+                        <input type="text" name="from_name" id="name" placeholder="Nom" class="rounded-md w-full text-text font-sans p-1 bg-background outline-none z-40">
                     </div>
                     
+                    <!-- Div qui gère le champ du=e l'adresse mail -->
                     <div id="emailCard" class="flex justify-center items-center border border-background bg-primary25 p-4 w-3/4 h-fit md:w-4/5 rounded" data-aos="fade-left" data-aos-duration="1500">
-                        <input type="email" name="email" id="email" placeholder="Mail" class="rounded-md w-full text-text font-sans p-1 bg-background outline-none ">
+                        <input type="email" name="user_email" id="email" placeholder="Mail" class="rounded-md w-full text-text font-sans p-1 bg-background outline-none ">
                     </div>
+                    
+                    <!-- Div qui gère le champ de l'objet -->
                     <div id="subjectCard" class="flex justify-center items-center border border-background bg-primary25 p-4 w-3/4 h-fit md:w-4/5 rounded" data-aos="fade-right" data-aos-duration="1500">
                         <input type="text" name="subject" id="subject" placeholder="Objet" class="rounded-md w-full text-text font-sans p-1 bg-background outline-none">
                     </div>
+                    
+                    <!-- Div qui gère le champ du message -->
                     <div id="messageCard" class="flex justify-center items-center border border-background bg-primary25 p-4 w-3/4 h-fit md:w-4/5 rounded" data-aos="fade-left" data-aos-duration="1500">
                         <textarea name="message" id="message" rows="5" cols="50" placeholder="Message" class="rounded-md w-full text-text font-sans p-1 bg-background outline-none"></textarea>
                     </div>
+                    
+                    <!-- Div qui gère le bouton d'envoi du formulaire -->
                     <div class="flex justify-center items-center hover:shadow-md w-1/3 rounded dark:hover:shadow-secondary" data-aos="fade-right" data-aos-duration="1500">
-                        <input type="button" onclick="sendEmail()" value="Envoyer" class="rounded-md w-full text-background bg-primary active:bg-background active:text-primary active:border-solid border border-primary font-sans p-3 transform transition-transform duration-300 hover:scale-105">
-                        <!-- <input type="submit" name="send" id="send" class="rounded-md w-full text-background bg-primary active:bg-background active:text-primary active:border-solid border border-primary font-sans p-3 transform transition-transform duration-300 hover:scale-105"> -->
+                        <input type="button" onclick="sendMail()" value="Envoyer" class="rounded-md w-full text-background bg-primary active:bg-background active:text-primary active:border-solid border border-primary font-sans p-3 transform transition-transform duration-300 hover:scale-105">
                     </div>
                 </form>
             </div>
-
-            <!-- <div class="flex justify-center my-4">
-                <hr class="border-t-1 w-1/2 md:w-1/3 border-text">
-            </div> -->
-
+        </section>
+        
+        <!-- Section contenant les liens utiles -->
+        <section id="links">
+            <!-- Div qui contient les différents liens -->
             <div class="flex justify-center gap-4" data-aos="fade-up" data-aos-duration="1500">
+                <!-- Lien qui redirige vers l'adresse mail -->
                 <a href="mailto:Antoine.NEBOUT@protonmail.com">
+                    <!-- Div qui gère l'icône de mail -->
                     <div class="border border-primary rounded p-4 bg-primary25 transform transition-transform duration-200 hover:translate-y-3 hover:shadow-md flex justify-center items-center w-16 h-16">
                         <img src="..\images\others\mailImage.png" alt="icône de mail">
                     </div>
                 </a>
                 
+                <!-- Lien qui redirige vers Linkedin -->
                 <a href="https://www.linkedin.com/in/antoine-nebout/" target="_blank">
+                    <!-- Div qui gère l'icône de Linkedin -->
                     <div class="border border-primary rounded p-4 bg-primary25 transform transition-transform duration-200 hover:translate-y-3 hover:shadow-md flex justify-center items-center w-16 h-16">
                         <img src="..\images\others\linkedin.svg" alt="icône de Linkedin">
                     </div>
                 </a>
 
+                <!-- Lien qui redirige vers GitHub -->
                 <a href="https://github.com/AntoineNEBOUT">
+                    <!-- Div qui gère les icônes de GitHub (thème clair et sombre) -->
                     <div class="border border-primary rounded p-4 bg-primary25 transform transition-transform duration-200 hover:translate-y-3 hover:shadow-md flex justify-center items-center w-16 h-16">
                             <img src="..\images\others\Github_light.svg" alt="icône de GitHub" class="w-auto h-10 rounded dark:hidden">
                             <img src="..\images\others\Github_dark.svg" alt="icône de GitHub" class="hidden w-auto h-10 rounded dark:block">
                     </div>
                 </a>
-
-                <!-- <div data-aos="fade-right" data-aos-duration="3000">
-                    <div class="bg-cardBackground drop-shadow-md p-2 rounded opacity-80 hover:opacity-100 transform transition-transform duration-200 hover:scale-110 dark:shadow-secondary">
-                        <a href="mailto:Antoine.NEBOUT@protonmail.com">
-                            <img src="..\images\others\mailImage.png" alt="icône de mail" class="w-auto h-10 rounded">
-                        </a>
-                    </div>
-                </div>
-
-                <div data-aos="fade-up" data-aos-duration="3000">
-                    <div class="bg-cardBackground drop-shadow-md p-2 rounded opacity-80 hover:opacity-100 transform transition-transform duration-200 hover:scale-110 dark:shadow-secondary">
-                        <a href="https://www.linkedin.com/in/antoine-nebout/" target="_blank">
-                            <img src="..\images\others\linkedin.svg" alt="icône de Linkedin" class="w-auto h-10 rounded">
-                        </a>
-                    </div>
-                </div>
-
-                <div data-aos="fade-left" data-aos-duration="3000">
-                    <div class="bg-cardBackground drop-shadow-md p-2 rounded opacity-80 hover:opacity-100 transform transition-transform duration-200 hover:scale-110 dark:shadow-secondary">
-                        <a href="https://github.com/AntoineNEBOUT" target="_blank">
-                            <img src="..\images\others\Github_light.svg" alt="icône de GitHub" class="w-auto h-10 rounded dark:hidden">
-                            <img src="..\images\others\Github_dark.svg" alt="icône de GitHub" class="hidden w-auto h-10 rounded dark:block">
-                        </a>
-                    </div>
-                </div> -->
             </div>
         </section>
     </main>
-    <script>
-        document.getElementById('togglePopup').addEventListener('change', function() {
-          var element = document.getElementById('menuMobilePopup');
-          if (this.checked) {
-            element.classList.remove('hidden');
-            document.querySelector('header').classList.add('h-full');
-            document.querySelector('nav').classList.add('bg-cardBackground');
-          } else {
-            element.classList.add('hidden');
-            document.querySelector('header').classList.remove('h-full');
-            document.querySelector('nav').classList.remove('bg-cardBackground');
-          }
-        });
-    </script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <!-- Footer de la page contact -->
+    <footer>
+        <div class="flex justify-end items-center w-full h-20 gap-6">
+            <div class=" mr-4 text-primary">
+                Antoine Nebout 2024
+            </div>
+        </div>
+    </footer>
+
+    <!-- Importation du script d'EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
     <script type="text/javascript">
-        function sendEmail() {
-            console.log("coucou");
-        Email.send({
-            Host : "smtp.elasticemail.com",
-            Username : "antoinenebout09@gmail.com",
-            Password : "C1B68501D05FE36F561CF9D3FE9A8CC761B1",
-            To : 'antoinenebout09@gmail.com',
-            From : 'antoinenebout09@gmail.com',
-            Subject : 'Nouveau message de votre formulaire de contact',
-            Body : "Nom : " + document.getElementById("name").value
-                + "<br>Adresse mail : " + document.getElementById("email").value
-                + "<br>Objet : " + document.getElementById("subject").value
-                + "<br>Message :<br>" + document.getElementById("message").value
-        }).then(
-          message => alert(message)
-        );
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "tCug1MA8GX7pIfeaS",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        function sendMail() {
+            event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('service_pplij5s', 'template_6ge5z9l', '#contact_form')
+                    .then(() => {
+                        alert('Le message a été correctement envoyé.');
+                    }, (error) => {
+                        alert('L\'envoie du message a échoué. Veuillez nous excusez, pouvez prendre contact via l\'adresse mail disponible en dessous du formulaire de contact.');
+                        console.log('FAILED :', error);
+                    });
         }
-    </script>        
+    </script>
+
+    <!-- Importation du script qui permet l'ouverture et la fermeture du menu pour les appareils mobile -->
+    <script src="../js/burgerMenu.js"></script>
+
+    <!-- Importation du script qui permet l'application d'un style particulier aux champs de texte lorsqu'il sont sélectionnés -->
     <script src="../js/formFocus.js"></script>
+
+    <!-- Importation et initialisation des scripts de AOS (Animate On Scroll) -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
