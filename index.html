@@ -23,28 +23,41 @@
         <span class="hidden 2xl:block 3xl:hidden">2XL</span>
     </div>
 
+    <!-- Header de la page principale (index.html) -->
     <header class="flex flex-col items-center fixed top-0 w-full z-50 gap-0">
+        <!-- Navbar de la page principale -->
         <nav class="bg-opacity-50 backdrop-blur-md p-4 rounded flex justify-between items-center mt-3 lg:gap-28 md:gap-20 max-md:w-3/4">
+            <!-- Bouton pour le changement de thème -->
             <button id="theme_toggle" type="button" class="group text-text md:flex md:justify-between md:items-center rounded-full border border-text hover:bg-text hover:text-background">
+                <!-- Textes des boutons -->
                 <span class="hidden md:p-1 md:pl-2 md:dark:hidden md:block">Assombrir</span>
                 <span class="hidden md:p-1 md:pl-2 md:dark:block md:hidden">Eclaircir</span>
+
+                <!-- Div qui gère l'icône de lune -->
                 <div class="p-2 md:p-1 md:pr-2 dark:p-0 dark:md:p-0 dark:md:pr-0 dark:hidden group-hover:p-0 group-hover:md:p-0 group-hover:md:pr-0 group-hover:hidden dark:group-hover:p-2 dark:group-hover:md:p-1 dark:group-hover:md:pr-2 dark:group-hover:block">
                     <img src="../images\others\moon.svg" alt="icône de lune">
                 </div>
+
+                <!-- Div qui gère l'icône de soleil -->
                 <div class="hidden p-0 md:p-0 md:pr-0 dark:p-2 dark:md:p-1 dark:md:pr-2 dark:block dark:group-hover:p-0 dark:group-hover:md:p-0 dark:group-hover:md:pr-0 dark:group-hover:hidden group-hover:p-2 group-hover:md:p-1 group-hover:md:pr-2 group-hover:block">
                     <img src="../images\others\sun.svg" alt="icône de soleil">
                 </div>
             </button>
+
+            <!-- Liste des liens redirigeant vers les sections de la page principale -->
             <ul class="md:flex max-md:hidden">
                 <li><a class="max-md:hidden max-md:m-0 m-2 text-text hover:opacity-75 activeNavBar" href="../index.html#about_me">À propos</a></li>
                 <li><a class="max-md:hidden max-md:m-0 m-2 text-text hover:opacity-75" href="../index.html#skills">Compétences</a></li>
                 <li><a class="max-md:hidden max-md:m-0 m-2 text-text hover:opacity-75" href="../index.html#education_and_experience">Expériences</a></li>
                 <li><a class="max-md:hidden max-md:m-0 m-2 text-text hover:opacity-75" href="../index.html#projects">Projets</a></li>
             </ul>
+
+            <!-- Bouton contacter -->
             <button type="button" onclick="window.location.href='pages\\contact.html';" class="text-text text-lg max-md:hover:opacity-75 md:text-base md:rounded md:p-1 md:text-background md:bg-text md:px-2 md:hover:text-text md:hover:bg-background md:border md:border-text md:hover:border-dashed md:active:border-solid">
                 Contacter
             </button>
 
+            <!-- Menu burger pour les appareils mobiles provient de : https://uiverse.io/Shubh0408/pink-cobra-51 -->
             <label class="md:hidden">
                 <div class="w-9 h-10 cursor-pointer flex flex-col items-center justify-center">
                     <input id="toggle_popup" class="hidden peer" type="checkbox"/>
@@ -55,6 +68,7 @@
             </label>
         </nav>
         
+        <!-- Menu mobile sous la forme d'une popup activable/désactivable -->
         <div id="menu_mobile_popup" class="bg-cardBackground rounded p-6 md:hidden hidden w-3/4 h-4/5 flex-col justify-center items-center gap-2 text-lg mt-2">
             <a onclick="scrollToSectionMobile()" class="m-2 text-text hover:opacity-75" href="index.html#about_me">À propos</a>
             <a onclick="scrollToSectionMobile()" class="m-2 text-text hover:opacity-75" href="index.html#skills">Compétences</a>
@@ -63,19 +77,25 @@
         </div>
     </header>
 
+    <!-- Main de la page principale -->
     <main>
-        <section id="about_me" class="flex justify-center items-center flex-wrap xl:h-dvh max-xl:pt-24 gap-12">            
+        <!-- Section contenant le 'À propos de moi' -->
+        <section id="about_me" class="flex justify-center items-center flex-wrap xl:h-dvh max-xl:pt-24 gap-12">
+            <!-- Div qui gère l'affichage de la photo de profil -->
             <div class="relative max-md:mb-7 group">
-                
+                <!-- Div qui constitue le fond décalé par rapport à la photo -->
                 <div class="rounded flex max-md:flex-col-reverse max-md:gap-5 justify-end items-center md:justify-center md:items-center w-full h-full bg-primary25 border-primary border shadow-md absolute max-md:right-4 max-md:top-4 md:right-6 md:top-6 transform transition-transform duration-500 group-hover:translate-x-6 group-hover:-translate-y-6 max-md:group-hover:translate-x-4 max-md:group-hover:-translate-y-4">
                 </div>
-                <div class="">
+
+                <!-- Div qui contient la photo de profil -->
+                <div>
                     <div class="bg-opacity-50 backdrop-blur-md rounded border border-primary p-3 shadow-md group-hover:shadow-none">
                         <img src="images\profilePictures\chemiseBleuFonce1RBG.png" alt="Photo de profil" class="scale-x-[-1]">
                     </div>
                 </div>
             </div>
 
+            <!-- Div qui contient les informations du 'À propos de moi' -->
             <div class="max-md:w-4/5 flex flex-col max-md:items-center md:w-80 md:mx-11 gap-10">
                 <h1 class="font-bold text-primary font-sans text-4xl max-md:text-center">
                     Antoine Nebout
@@ -83,70 +103,70 @@
                 <div class="text-text max-md:text-center md:text-justify">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </div>
+
+                <!-- Bouton pour télécharger le CV -->
                 <button type="button" class="max-md:mb-3 rounded bg-primary text-background py-2 px-3 active:bg-background active:text-primary active:border-solid border border-primary font-sans transform transition-transform duration-500 hover:scale-105">
                     Télécharger mon CV
                 </button>
             </div>
         </section>
         
+        <!-- Section contenant les compétences -->
         <section id="skills" class="flex flex-col justify-center items-center xl:h-dvh">
+            <!-- Div qui gère le titre de la catégorie -->
             <div class="flex justify-center items-center md:hidden">
                 <h2 class="text-text text-center font-bold font-sans text-3xl z-40 my-24">
                     Compétences
                 </h2>
             </div>
-            <!-- <div class="flex justify-center" data-aos="fade-right" data-aos-duration="1000">
-                <div class="bg-cardBackground drop-shadow-md p-6 flex-col justify-center rounded max-md:w-3/4 md:w-fit md:h-fit my-6">
-                    <div class="flex justify-center items-center flex-wrap gap-7">
-                        <img src="images\skillsPictures\programmingLangages\python.svg" alt="icône python" class="w-auto h-12 transform transition-transform duration-200 hover:scale-125">
-                        <img src="images\skillsPictures\programmingLangages\java.svg" alt="icône java" class="w-auto h-12 transform transition-transform duration-200 hover:scale-125">
-                        <img src="images\skillsPictures\programmingLangages\c++.svg" alt="icône c plus plus" class="w-auto h-12 transform transition-transform duration-200 hover:scale-125">
-                        <img src="images\skillsPictures\programmingLangages\c.svg" alt="icône c" class="w-auto h-12 transform transition-transform duration-200 hover:scale-125">
-                        <img src="images\skillsPictures\programmingLangages\html5.svg" alt="icône html" class="w-auto h-12 transform transition-transform duration-200 hover:scale-125">
-                        <img src="images\skillsPictures\programmingLangages\css.svg" alt="icône css" class="w-auto h-12 transform transition-transform duration-200 hover:scale-125">
-                        <img src="images\skillsPictures\programmingLangages\javascript.svg" alt="icône javascript" class="w-auto h-12 transform transition-transform duration-200 hover:scale-125">
-                    </div>
-                </div>
-            </div> -->
+
+            <!-- Div qui gère toutes les compétences relatives aux langages informatiques -->
             <div class="flex justify-center md:pt-24">
                 <div class="flex-col justify-center rounded max-md:w-3/4 md:w-fit md:h-fit my-6">
                     <div class="flex justify-center items-center flex-wrap gap-7">
+                        <!-- Div qui contient et gère l'icône de Python -->
                         <div data-aos="fade-up" data-aos-duration="1600">
                             <div class="border border-primary rounded p-4 bg-primary25 transform transition-transform duration-500 hover:-translate-y-3 hover:shadow-md flex justify-center items-center w-20 h-20">
                                 <img src="images\skillsPictures\programmingLangages\python.svg" alt="icône python">
                             </div>
                         </div>
                         
+                        <!-- Div qui contient et gère l'icône de Java -->
                         <div data-aos="fade-up" data-aos-duration="1500">
                             <div class="border border-primary rounded p-4 bg-primary25 transform transition-transform duration-500 hover:-translate-y-3 hover:shadow-md flex justify-center items-center w-20 h-20">
                                 <img src="images\skillsPictures\programmingLangages\java.svg" alt="icône java">
                             </div>
                         </div>
                         
+                        <!-- Div qui contient et gère l'icône de C++ -->
                         <div data-aos="fade-up" data-aos-duration="1400">
                             <div class="border border-primary rounded p-4 bg-primary25 transform transition-transform duration-500 hover:-translate-y-3 hover:shadow-md flex justify-center items-center w-20 h-20">
                                 <img src="images\skillsPictures\programmingLangages\c++.svg" alt="icône c plus plus">
                             </div>
                         </div>
                         
+                        <!-- Div qui contient et gère l'icône de C -->
                         <div data-aos="fade-up" data-aos-duration="1300">
                             <div class="border border-primary rounded p-4 bg-primary25 transform transition-transform duration-500 hover:-translate-y-3 hover:shadow-md flex justify-center items-center w-20 h-20">
                                 <img src="images\skillsPictures\programmingLangages\c.svg" alt="icône c">
                             </div>
                         </div>
-
+                        
+                        <!-- Div qui contient et gère l'icône de HTML -->
                         <div data-aos="fade-up" data-aos-duration="1200">
                             <div class="border border-primary rounded p-4 bg-primary25 transform transition-transform duration-500 hover:-translate-y-3 hover:shadow-md flex justify-center items-center w-20 h-20">
                                 <img src="images\skillsPictures\programmingLangages\html5.svg" alt="icône html">
                             </div>
                         </div>
-
+                        
+                        <!-- Div qui contient et gère l'icône de CSS -->
                         <div data-aos="fade-up" data-aos-duration="1100">
                             <div class="border border-primary rounded p-4 bg-primary25 transform transition-transform duration-500 hover:-translate-y-3 hover:shadow-md flex justify-center items-center w-20 h-20">
                                 <img src="images\skillsPictures\programmingLangages\css.svg" alt="icône css">
                             </div>
                         </div>
-
+                        
+                        <!-- Div qui contient et gère l'icône de Javascript -->
                         <div data-aos="fade-up" data-aos-duration="1000">
                             <div class="border border-primary rounded p-4 bg-primary25 transform transition-transform duration-500 hover:-translate-y-3 hover:shadow-md flex justify-center items-center w-20 h-20">
                                 <img src="images\skillsPictures\programmingLangages\javascript.svg" alt="icône javascript">
@@ -154,52 +174,42 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="relative max-md:w-3/4 md:w-fit md:h-fit my-6">
-                    <div class="rounded w-full h-full bg-primary25 border-primary border shadow-md absolute max-md:right-1 max-md:top-1 md:right-2 md:top-2" data-aos="fade-right"
-                    data-aos-duration="1300">
-                    </div>  
-                        <div class="bg-opacity-50 backdrop-blur-md rounded border border-primary p-3" data-aos="fade-right"
-                        data-aos-duration="1000"><div class="flex justify-center items-center flex-wrap gap-7">
-                            <img src="images\skillsPictures\programmingLangages\python.svg" alt="icône python" class="w-auto h-12 transform transition-transform duration-200 hover:scale-125">
-                            <img src="images\skillsPictures\programmingLangages\java.svg" alt="icône java" class="w-auto h-12 transform transition-transform duration-200 hover:scale-125">
-                            <img src="images\skillsPictures\programmingLangages\c++.svg" alt="icône c plus plus" class="w-auto h-12 transform transition-transform duration-200 hover:scale-125">
-                            <img src="images\skillsPictures\programmingLangages\c.svg" alt="icône c" class="w-auto h-12 transform transition-transform duration-200 hover:scale-125">
-                            <img src="images\skillsPictures\programmingLangages\html5.svg" alt="icône html" class="w-auto h-12 transform transition-transform duration-200 hover:scale-125">
-                            <img src="images\skillsPictures\programmingLangages\css.svg" alt="icône css" class="w-auto h-12 transform transition-transform duration-200 hover:scale-125">
-                            <img src="images\skillsPictures\programmingLangages\javascript.svg" alt="icône javascript" class="w-auto h-12 transform transition-transform duration-200 hover:scale-125">
-                        </div>
-                    </div>
-                </div> -->
             </div>
             
+            <!-- Div qui gère toutes les compétences relatives aux outils -->
             <div class="flex justify-center my-10">
                 <div class="flex-col justify-center rounded max-md:w-3/4 md:w-fit md:h-fit mb-6">
                     <div class="flex justify-center items-center flex-wrap gap-7">
+                        <!-- Div qui contient et gère l'icône de GitHub -->
                         <div data-aos="zoom-in" data-aos-duration="1000">
                             <div class="border border-primary rounded-full p-4 bg-primary25 transform transition-transform duration-500 hover:rotate-180 flex justify-center items-center w-20 h-20">
                                 <img src="..\images\others\Github_light.svg" alt="icône de GitHub" class="dark:hidden">
                                 <img src="..\images\others\Github_dark.svg" alt="icône de GitHub" class="hidden dark:block">
                             </div>
                         </div>
-
+                        
+                        <!-- Div qui contient et gère l'icône de Visual Studio Code -->
                         <div data-aos="zoom-in" data-aos-duration="1500">
                             <div class="border border-primary rounded-full p-4 bg-primary25 transform transition-transform duration-500 hover:rotate-180 flex justify-center items-center w-20 h-20">
                                 <img src="images\skillsPictures\tools\vscode.svg" alt="icône visual studio code">
                             </div>
                         </div>
-
+                        
+                        <!-- Div qui contient et gère l'icône d'IntelliJ Idea -->
                         <div data-aos="zoom-in" data-aos-duration="2000">
                             <div class="border border-primary rounded-full p-4 bg-primary25 transform transition-transform duration-500 hover:rotate-180 flex justify-center items-center w-20 h-20">
                                 <img src="images\skillsPictures\tools\intellijidea.svg" alt="icône intellij idea">
                             </div>
                         </div>
-
+                        
+                        <!-- Div qui contient et gère l'icône de Notion -->
                         <div data-aos="zoom-in" data-aos-duration="2500">
                             <div class="border border-primary rounded-full p-4 bg-primary25 transform transition-transform duration-500 hover:rotate-180 flex justify-center items-center w-20 h-20">
                                 <img src="images\skillsPictures\tools\notion.svg" alt="icône notion">
                             </div>
                         </div>
-
+                        
+                        <!-- Div qui contient et gère l'icône de WordPress -->
                         <div data-aos="zoom-in" data-aos-duration="3000">
                             <div class="border border-primary rounded-full p-4 bg-primary25 transform transition-transform duration-500 hover:rotate-180 flex justify-center items-center w-20 h-20">
                                 <img src="images\skillsPictures\tools\wordpress.svg" alt="icône wordpress">
@@ -207,33 +217,21 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class=" group relative max-md:w-3/4 md:w-fit md:h-fit my-6">
-                    <div class="rounded w-full h-full bg-primary25 border-primary border shadow-md absolute max-md:right-1 max-md:top-1 md:right-2 md:top-2" data-aos="fade-left"
-                    data-aos-duration="1000">
-                    </div>  
-                        <div class="bg-opacity-50 backdrop-blur-md rounded border border-primary p-3" data-aos="fade-left"
-                        data-aos-duration="1500"><div class="flex justify-center items-center flex-wrap gap-7">
-                            <img src="..\images\others\Github_light.svg" alt="icône de GitHub" class="w-auto h-12 transform transition-transform duration-200 hover:scale-125 rounded dark:hidden">
-                            <img src="..\images\others\Github_dark.svg" alt="icône de GitHub" class="hidden w-auto h-12 transform transition-transform duration-200 hover:scale-125 rounded dark:block">
-                            <img src="images\skillsPictures\tools\vscode.svg" alt="icône visual studio code" class="w-auto h-12 transform transition-transform duration-200 hover:scale-125">
-                            <img src="images\skillsPictures\tools\intellijidea.svg" alt="icône intellij idea" class="w-auto h-12 transform transition-transform duration-200 hover:scale-125">
-                            <img src="images\skillsPictures\tools\notion.svg" alt="icône notion" class="w-auto h-12 transform transition-transform duration-200 hover:scale-125">
-                            <img src="images\skillsPictures\tools\wordpress.svg" alt="icône wordpress" class="w-auto h-12 transform transition-transform duration-200 hover:scale-125">
-                        </div>
-                    </div>
-                </div> -->
             </div>
 
+            <!-- Div qui gère toutes les compétences relatives aux framworks -->
             <div class="flex justify-center">
                 <div class="flex-col justify-center rounded max-md:w-3/4 md:w-fit md:h-fit">
                     <div class="flex justify-center items-center flex-wrap gap-7">
                         <div class="flex justify-center items-center flex-wrap gap-7">
+                            <!-- Div qui contient et gère l'icône de TailwindCSS -->
                             <div data-aos="fade-up-right" data-aos-duration="2000">
                                 <div class="border border-primary rounded p-4 bg-primary25 transform transition-transform duration-500 hover:translate-y-3 hover:shadow-md flex justify-center items-center w-20 h-20">
                                     <img src="images\skillsPictures\frameworks\tailwindcss.svg" alt="icône tailwindcss">
                                 </div>
                             </div>
-
+                            
+                        <!-- Div qui contient et gère l'icône de Qt -->
                             <div data-aos="fade-up-left" data-aos-duration="2000">
                                 <div class="border border-primary rounded p-4 bg-primary25 transform transition-transform duration-500 hover:translate-y-3 hover:shadow-md flex justify-center items-center w-20 h-20">
                                     <img src="images\skillsPictures\frameworks\qt.svg" alt="icône qt">
@@ -241,36 +239,35 @@
                             </div>
                     </div>
                 </div>
-                <!-- <div class=" group relative max-md:w-3/4 md:w-fit md:h-fit my-6">
-                    <div class="rounded w-full h-full bg-primary25 border-primary border shadow-md absolute max-md:right-1 max-md:top-1 md:right-2 md:top-2" data-aos="fade-up"
-                    data-aos-duration="1500">
-                    </div>  
-                        <div class="bg-opacity-50 backdrop-blur-md rounded border border-primary p-3" data-aos="fade-up"
-                        data-aos-duration="1000"><div class="flex justify-center items-center flex-wrap gap-7">
-                            <img src="images\skillsPictures\frameworks\tailwindcss.svg" alt="icône tailwindcss" class="w-auto h-12 transform transition-transform duration-200 hover:scale-125">
-                            <img src="images\skillsPictures\frameworks\qt.svg" alt="icône qt" class="w-auto h-12 transform transition-transform duration-200 hover:scale-125">
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </section>
 
+        <!-- Section contenant les formations et les expériences -->
         <section id="education_and_experience" class="xl:h-dvh">
+            <!-- Div qui gère le titre de la catégorie -->
             <div class="flex justify-center items-center md:hidden">
                 <h2 class="text-text text-center font-bold font-sans text-3xl my-24 z-40">
                     Formations & Expériences
                 </h2>
             </div>
+
+            <!-- Grille qui contient les formations dans une première colonne et les expériences dans une deuxième colonne -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:pt-24">
+                <!-- Div qui contient les formations -->
                 <div class="flex flex-col gap-4 w-3/4 md:w-2/3 justify-self-center lg:justify-self-end">
+                    <!-- Titre de la sous-catégorie -->
                     <h3 class="text-text text-center font-bold font-sans text-2xl justify-self-center md:hidden">
                         Formations
                     </h3>
 
+                    <!-- Div qui contrôle la formation de l'Institut G4 -->
                     <div class="relative">
+                        <!-- Div qui correspond au fond décalé par rapport au contenu -->
                         <div class="rounded w-3/4 h-1/2 bg-primary25 border-primary border shadow-md absolute right-0 left-0 bottom-0 top-0 m-auto"></div>
                         
+                        <!-- Div qui contient le contenu lié à la formation -->
                         <div class="flex flex-col-reverse items-center justify-center rounded gap-4">
+                            <!-- Div qui contient les informations textuelles liées à la formation -->
                             <div class="flex flex-col gap-4 w-full bg-opacity-50 backdrop-blur-md border border-primary rounded p-4 transform transition-transform duration-200 hover:scale-[1.01] hover:shadow-md">
                                 <h4 class="text-text font-bold font-sans text-2xl text-center">
                                     Développeur web
@@ -283,6 +280,7 @@
                                 </h6>
                             </div>
 
+                            <!-- Div qui contient l'image de l'Institut G4 -->
                             <div class="flex items-center bg-opacity-50 backdrop-blur-md border border-primary rounded p-4 w-36 h-36 transform transition-transform duration-200 hover:scale-[1.02] hover:shadow-md">
                                 <img src="images\educationPicture\g4Logo.png" alt="image de ND De Mongré" class="rounded">
                             </div>
@@ -290,8 +288,12 @@
                     </div>
                     
                     <div class="relative">
-                        <div class="rounded w-3/4 h-1/2 bg-primary25 border-primary border shadow-md absolute right-0 left-0 bottom-0 top-0 m-auto"></div>                        
+                        <!-- Div qui correspond au fond décalé par rapport au contenu -->
+                        <div class="rounded w-3/4 h-1/2 bg-primary25 border-primary border shadow-md absolute right-0 left-0 bottom-0 top-0 m-auto"></div>
+
+                        <!-- Div qui contient le contenu lié à la formation -->
                         <div class="flex flex-col-reverse items-center justify-center gap-4">
+                            <!-- Div qui contient les informations textuelles liées à la formation -->
                             <div class="flex flex-col gap-4 w-full bg-opacity-50 backdrop-blur-md border border-primary rounded p-4 transform transition-transform duration-200 hover:scale-[1.01] hover:shadow-md">
                                 <h4 class="text-text font-bold font-sans text-2xl text-center">
                                     Baccalauréat Général
@@ -303,7 +305,8 @@
                                     Septembre 2023 - Juin 2024
                                 </h6>
                             </div>
-
+                            
+                            <!-- Div qui contient l'image du Lycée ND de Mongré -->
                             <div class="flex items-center bg-opacity-50 backdrop-blur-md border border-primary rounded p-4 w-36 h-36 transform transition-transform duration-200 hover:scale-[1.02] hover:shadow-md">
                                 <img src="images\educationPicture\school.avif" alt="image de ND De Mongré" class="rounded">
                             </div>
@@ -316,26 +319,14 @@
                     <h3 class="text-text text-center font-bold font-sans text-2xl md:hidden">
                         Expériences
                     </h3>
-    
-                    <!-- <div class="flex flex-col-reverse items-center justify-center xl:flex-row xl:justify-center border border-primary shadow-md p-6 rounded gap-4 h-full">
-                        <div class="flex flex-col gap-4 xl:w-2/3">
-                            <h4 class="text-text font-bold font-sans text-2xl text-center xl:text-left">
-                                Alternant Informatique
-                            </h4>
-                            <h5 class="text-text font-sans text-lg text-center xl:text-left">
-                                Technicentre TGV de Lyon
-                            </h5>
-                            <h6 class="text-primary font-sans text-base text-center xl:text-left">
-                                Septembre 2024 à aujoud'hui
-                            </h6>
-                        </div>
-                        <img src="images\experiencePicture\sncf.avif" alt="logo technicentre lyon" class="w-auto h-36 rounded">
-                    </div> -->
 
                     <div class="relative">
+                        <!-- Div qui correspond au fond décalé par rapport au contenu -->
                         <div class="rounded w-3/4 h-1/2 bg-primary25 border-primary border shadow-md absolute right-0 left-0 bottom-0 top-0 m-auto"></div>
-
+                        
+                        <!-- Div qui contient le contenu lié à l'expérience -->
                         <div class="flex flex-col-reverse items-center justify-center gap-4 h-full">
+                            <!-- Div qui contient les informations textuelles liées à l'expérience -->
                             <div class="flex flex-col gap-4 w-full bg-opacity-50 backdrop-blur-md border border-primary rounded p-4 transform transition-transform duration-200 hover:scale-[1.01] hover:shadow-md">
                                 <h4 class="text-text font-bold font-sans text-2xl text-center">
                                     Alternant Informatique
@@ -347,7 +338,8 @@
                                     Septembre 2024 à aujoud'hui
                                 </h6>
                             </div>
-
+                            
+                            <!-- Div qui contient le logo du Technicentre TGV de Lyon -->
                             <div class="flex items-center bg-opacity-50 backdrop-blur-md border border-primary rounded p-4 w-36 h-36 transform transition-transform duration-200 hover:scale-[1.02] hover:shadow-md">
                                 <img src="images\experiencePicture\sncf.avif" alt="logo technicentre lyon" class="rounded">
                             </div>
@@ -356,9 +348,12 @@
                     </div>
     
                     <div class="relative">
+                        <!-- Div qui correspond au fond décalé par rapport au contenu -->
                         <div class="rounded w-3/4 h-1/2 bg-primary25 border-primary border shadow-md absolute right-0 left-0 bottom-0 top-0 m-auto"></div>
-
+                        
+                        <!-- Div qui contient le contenu lié à l'expérience -->
                         <div class="flex flex-col-reverse items-center justify-center  gap-4">
+                            <!-- Div qui contient les informations textuelles liées à l'expérience -->
                             <div class="flex flex-col gap-4 w-full bg-opacity-50 backdrop-blur-md border border-primary rounded p-4 transform transition-transform duration-200 hover:scale-[1.01] hover:shadow-md">
                                 <h4 class="text-text font-bold font-sans text-2xl text-center">
                                     Stage d'observation
@@ -370,7 +365,8 @@
                                     Juin 2022
                                 </h6>
                             </div>
-
+                            
+                            <!-- Div qui contient le logo de ENEDIS -->
                             <div class="flex items-center bg-opacity-50 backdrop-blur-md border border-primary rounded p-4 w-36 h-36 transform transition-transform duration-200 hover:scale-[1.02] hover:shadow-md">
                                 <img src="images\experiencePicture\enedis.avif" alt="logo endis" class="rounded">
                             </div>
@@ -380,7 +376,9 @@
             </div>
         </section>
 
+        <!-- Section contenant les projets -->
         <section id="projects" class="flex flex-col items-center gap-6 xl:h-dvh">
+            <!-- Div qui gère le titre de la catégorie -->
             <div class="flex justify-center items-center md:hidden">
                 <h2 class="text-text text-center font-bold font-sans text-3xl mt-24 mb-4 z-40">
                     Projets
