@@ -24,6 +24,7 @@ openNSI.addEventListener('click', () => {
 // Cache la popup lorsque le bouton 'Fermer' est cliqué
 closePopup.addEventListener('click', () => {
     popup.classList.add('hidden');
+    popup.classList.remove('flex');
 });
 
 function openPopup(projectName) {
@@ -51,4 +52,5 @@ function openPopup(projectName) {
     }
 
     popup.classList.remove('hidden');
+    popup.classList.add('flex');
 }

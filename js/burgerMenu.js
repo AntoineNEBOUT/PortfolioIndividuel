@@ -16,17 +16,13 @@ function toggleMenuMobile(burgerMenuState) {
 	if (burgerMenuState) { // Dans le cas où la checkbox du menu burger est activée
 		menuMobile.classList.remove('hidden');
 		menuMobile.classList.add('flex');
-		pageHeader.classList.add('h-full');
-		pageNavBar.classList.add('bg-cardBackground');
 	  } else { // Dans le cas où la checkbox du menu burger est désactivée
 		menuMobile.classList.add('hidden');
 		menuMobile.classList.remove('flex');
-		pageHeader.classList.remove('h-full');
-		pageNavBar.classList.remove('bg-cardBackground');
 	  }
 }
 
-function scrollToSectionMobile() {
+function closeMenuMobile() {
 	/*
 		Fonction qui cache le menu mobile. Elle est utilisée lorsqu'un lien du menu est cliqué
 	*/

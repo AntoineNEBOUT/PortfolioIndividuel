@@ -76,11 +76,27 @@
         </nav>
         
         <!-- Menu mobile sous la forme d'une popup activable/désactivable -->
-        <div id="menu_mobile_popup" class="bg-cardBackground rounded p-6 md:hidden hidden w-3/4 h-4/5 flex-col justify-center items-center gap-2 text-lg mt-2">
+        <!-- <div id="menu_mobile_popup" class="bg-cardBackground rounded p-6 md:hidden hidden w-3/4 h-1/2 flex-col justify-center items-center gap-2 text-lg mt-2">
             <a onclick="scrollToSectionMobile()" class="m-2 text-text hover:opacity-75" href="index.html#about_me">À propos</a>
             <a onclick="scrollToSectionMobile()" class="m-2 text-text hover:opacity-75" href="index.html#skills">Compétences</a>
             <a onclick="scrollToSectionMobile()" class="m-2 text-text hover:opacity-75" href="index.html#education_and_experience">Expériences</a>
             <a onclick="scrollToSectionMobile()" class="m-2 text-text hover:opacity-75" href="index.html#projects">Projets</a>
+        </div> -->
+
+        <div id="menu_mobile_popup" class="fixed inset-0 items-center justify-center bg-black bg-opacity-50 hidden z-50">
+            <div class="flex flex-col justify-around items-center bg-cardBackground text-text p-6 rounded shadow-lg w-3/4 h-1/2">
+                <div class="flex flex-col justify-center items-center gap-4">
+                    <a onclick="closeMenuMobile()" class="m-2 text-xl text-text hover:opacity-75" href="index.html#about_me">À propos</a>
+                    <a onclick="closeMenuMobile()" class="m-2 text-xl text-text hover:opacity-75" href="index.html#skills">Compétences</a>
+                    <a onclick="closeMenuMobile()" class="m-2 text-xl text-text hover:opacity-75" href="index.html#education_and_experience">Expériences</a>
+                    <a onclick="closeMenuMobile()" class="m-2 text-xl text-text hover:opacity-75" href="index.html#projects">Projets</a>
+                </div>
+                <div>
+                    <button onclick="closeMenuMobile()" class="text-base rounded p-1 text-cardBackground bg-text px-4 hover:text-text hover:bg-cardBackground border border-text hover:border-dashed active:border-solid">
+                        Fermer
+                    </button>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -524,7 +540,7 @@
                     </div>
                 </div>
 
-                <div id="popup" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
+                <div id="popup" class="fixed inset-0 items-center justify-center bg-black bg-opacity-50 hidden z-50">
                     <div class="bg-cardBackground text-text p-6 rounded shadow-lg w-3/4 h-auto">
                         <div class="flex flex-col items-center gap-4">
                             <h3 id="project_title" class="text-2xl font-bold">
