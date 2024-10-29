@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
+    <!-- Importation du script permettant le changement de thème -->
     <script src="js/darkMode.js" async></script>
 
+    <!-- Importation de la feuille de style du site -->
     <link href="css\tailwind.css" rel="stylesheet">
+    <!-- Importation de la feuille de style de AOS (Animate On Scroll) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <!-- Icône de la page principale -->
     <link rel="icon" href="icon\profile.ico">
 
-    <title>Antoine Nebout - Portfolio</title>
+    <!-- Titre de la page principale -->
+    <title>Antoine Nebout</title>
 </head>
+
+<!-- Body (corps = contenu) de la page de contact -->
 <body id="body_index" class="bg-background overflow-x-hidden font-sans">
     <div class="fixed bottom-4 left-4">
         <span class="sm:hidden">XS</span>
@@ -406,80 +413,83 @@
                 <img src="images\projectsPictures\portfolioLogo.avif" alt="logo du portfolio">
             </div> -->
             
+            <!-- Grille qui contient et organise les projets -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-9 mx-auto w-3/4 md:pt-32">
+                <!-- Div qui contient le projet du portfolio personnel -->
                 <div class="relative w-full md:w-full h-auto group">
+                    <!-- Div qui correspond au fond décalé par rapport au contenu -->
                     <div class="rounded w-full h-full bg-primary25 border-primary border absolute right-0 bottom-0 transform transition-transform duration-500 group-hover:-translate-x-6 group-hover:-translate-y-6">
                         <h4 class="text-text mx-2 font-semibold">
                             Cliquez pour en savoir plus
                         </h4>
                     </div>
                     
+                    <!-- Div qui contient les informations liées au projet -->
                     <div id="project_portfolio" class="flex flex-col justify-between items-center gap-4 flex-wrap w-full h-full rounded border border-primary bg-opacity-50 backdrop-blur-md py-4 hover:shadow-lg">
+                        <!-- Titre du projet -->
                         <h3 class="text-text text-center font-bold font-sans text-2xl p-2">
                             Portfolio personnel
                         </h3>
+
+                        <!-- Image d'illustration du projet -->
                         <div class="flex justify-center">
                             <img src="images\projectsPictures\portfolioLogo.avif" alt="logo du portfolio personnel" class="w-1/2 md:w-40 h-auto rounded">
                         </div>
+
+                        <!-- Icônes des compétences utilisées sur ce projet -->
                         <div class="flex justify-center items-center flex-wrap gap-4">
+                            <!-- Div qui gère l'icône de HTML -->
                             <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12">
                                 <img src="images\skillsPictures\programmingLangages\html5.svg" alt="icône html">
                             </div>
+                            
+                            <!-- Div qui gère l'icône de TailwindCSS -->
                             <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12">
                                 <img src="images\skillsPictures\frameworks\tailwindcss.svg" alt="icône tailwindcss">
                             </div>
+                            
+                            <!-- Div qui gère l'icône de Visual Studio Code -->
                             <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12">
                                 <img src="images\skillsPictures\tools\vscode.svg" alt="icône visual studio code">
                             </div>
+                            
+                            <!-- Div qui gère l'icône de GitHub -->
                             <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12">
                                 <img src="..\images\others\Github_light.svg" alt="icône de GitHub" class="dark:hidden">
-                            <img src="..\images\others\Github_dark.svg" alt="icône de GitHub" class="hidden dark:block">
+                                <img src="..\images\others\Github_dark.svg" alt="icône de GitHub" class="hidden dark:block">
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- <div class="flex flex-col justify-between items-center flex-wrap w-3/4 sm:w-72 h-auto rounded border border-primary bg-opacity-50 backdrop-blur-md py-4">
-                    <h3 class="text-text text-center font-bold font-sans text-2xl">
-                        Portfolio personnel
-                    </h3>
-                    <div class="flex justify-center">
-                        <img src="images\projectsPictures\portfolioLogo.avif" alt="logo du portfolio personnel" class="w-1/2 md:w-40 h-auto rounded">
-                    </div>
-                    <div class="flex justify-center items-center flex-wrap gap-4">
-                        <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12">
-                            <img src="images\skillsPictures\programmingLangages\html5.svg" alt="icône html">
-                        </div>
-                        <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12">
-                            <img src="images\skillsPictures\frameworks\tailwindcss.svg" alt="icône tailwindcss">
-                        </div>
-                        <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12">
-                            <img src="images\skillsPictures\tools\vscode.svg" alt="icône visual studio code">
-                        </div>
-                        <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12">
-                            <img src="..\images\others\Github_light.svg" alt="icône de GitHub" class="dark:hidden">
-                        <img src="..\images\others\Github_dark.svg" alt="icône de GitHub" class="hidden dark:block">
-                        </div>
-                    </div>
-                </div> -->
                 
+                <!-- Div qui contient le projet du site vitrine pour une équipe d'esport fictive -->
                 <div class="relative w-full h-auto group">
+                    <!-- Div qui correspond au fond décalé par rapport au contenu -->
                     <div class="rounded w-full h-full bg-primary25 border-primary border absolute right-0 bottom-0 transform transition-transform duration-500 group-hover:-translate-x-6 group-hover:-translate-y-6 md:group-hover:translate-x-6 md:group-hover:-translate-y-6 lg:group-hover:-translate-x-0 lg:group-hover:-translate-y-6">
                         <h4 class="text-text mx-2 font-semibold">
                             Cliquez pour en savoir plus
                         </h4>
                     </div>
+
                     <div class="flex flex-col justify-between items-center gap-4 flex-wrap w-full h-full rounded border border-primary bg-opacity-50 backdrop-blur-md py-4 hover:shadow-lg">
+                        <!-- Titre du projet -->
                         <h3 class="text-text text-center font-bold font-sans text-2xl p-2">
                             Site vitrine pour une équipe d'esport
                         </h3>
+
+                        <!-- Image d'illustration du projet -->
                         <div class="flex justify-center">
                             <img src="images\projectsPictures\g4EsportLyonLogo.png" alt="logo dde l'Institut G4" class="w-1/2 md:w-40 h-auto rounded">
                         </div>
+                        
+                        <!-- Icônes des compétences utilisées sur ce projet -->
                         <div class="flex justify-center items-center flex-wrap gap-4">
+                            <!-- Div qui gère l'icône de WordPress -->
                             <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12">
                                 <img src="images\skillsPictures\tools\wordpress.svg" alt="icône wordpress">
                             </div>
+                            
+                            <!-- Div qui gère l'icône de HTML -->
                             <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12">
                                 <img src="images\skillsPictures\programmingLangages\html5.svg" alt="icône html">
                             </div>
@@ -487,62 +497,68 @@
                     </div>
                 </div>
                 
+                <!-- Div qui contient le projet du gestionnaire de tournoi -->
                 <div class="relative w-full h-auto group">
+                    <!-- Div qui correspond au fond décalé par rapport au contenu -->
                     <div class="rounded w-full h-full bg-primary25 border-primary border absolute right-0 bottom-0 transform transition-transform duration-500 group-hover:-translate-x-6 group-hover:-translate-y-6  lg:group-hover:translate-x-6 lg:group-hover:-translate-y-6">
                         <h4 class="text-text mx-2 font-semibold">
                             Cliquez pour en savoir plus
                         </h4>
                     </div>
                     <div class="flex flex-col justify-between items-center gap-4 flex-wrap w-full h-full rounded border border-primary bg-opacity-50 backdrop-blur-md py-4 hover:shadow-lg">
+                        <!-- Titre du projet -->
                         <h3 class="text-text text-center font-bold font-sans text-2xl p-2">
                             Gestionnaire de tournoi - Les Trophées NSI 2024
                         </h3>
+
+                        <!-- Image d'illustration du projet -->
                         <div class="flex justify-center">
                             <img src="images\projectsPictures\olympicTournamentImage.avif" alt="logo des Trophées NSI 2024" class="w-1/2 md:w-40 h-auto rounded">
                         </div>
+                        
+                        <!-- Icônes des compétences utilisées sur ce projet -->
                         <div class="flex justify-center items-center flex-wrap gap-4">
+                            <!-- Div qui gère l'icône de Python -->
                             <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12">
                                 <img src="images\skillsPictures\programmingLangages\python.svg" alt="icône python">
                             </div>
+                            
+                            <!-- Div qui gère l'icône de Qt -->
                             <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12">
                                 <img src="images\skillsPictures\frameworks\qt.svg" alt="icône qt">
                             </div>
+                            
+                            <!-- Div qui gère l'icône de Visual Studio Code -->
                             <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12">
                                 <img src="images\skillsPictures\tools\vscode.svg" alt="icône visual studio code">
                             </div>
+                            
+                            <!-- Div qui gère l'icône de GitHub -->
                             <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12">
                                 <img src="..\images\others\Github_light.svg" alt="icône de GitHub" class="dark:hidden">
-                            <img src="..\images\others\Github_dark.svg" alt="icône de GitHub" class="hidden dark:block">
+                                <img src="..\images\others\Github_dark.svg" alt="icône de GitHub" class="hidden dark:block">
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- <div class="bg-cardBackground drop-shadow-md p-6 flex flex-col justify-between items-center flex-wrap gap-4 w-3/4 sm:w-72 h-auto rounded">
-                    <h3 class="text-text text-center font-bold font-sans text-2xl">
-                        Gestionnaire de tournoi - Les Trophées NSI 2024
-                    </h3>
-                    <div class="flex justify-center hover:opacity-80 dark:hover:opacity-50">
-                        <img src="images\projectsPictures\olympicTournamentImage.avif" alt="logo des Trophées NSI 2024" class="w-1/2 md:w-40 h-auto rounded">
-                    </div>
-                    <div class="flex items-center flex-wrap gap-4">
-                        <img src="images\skillsPictures\programmingLangages\python.svg" alt="icône python"   class="w-auto h-10 transform transition-transform duration-200 hover:scale-125">
-                        <img src="images\skillsPictures\frameworks\qt.svg" alt="icône qt"   class="w-auto h-10 transform transition-transform duration-200 hover:scale-125">
-                        <img src="images\skillsPictures\tools\vscode.svg" alt="icône visual studio code"   class="w-auto h-10 transform transition-transform duration-200 hover:scale-125">
-                        <img src="..\images\others\Github_light.svg" alt="icône de GitHub" class="w-auto h-10 transform transition-transform duration-200 hover:scale-125 rounded dark:hidden">
-                        <img src="..\images\others\Github_dark.svg" alt="icône de GitHub" class="hidden w-auto h-10 transform transition-transform duration-200 hover:scale-125 rounded dark:block">
-                    </div>
-                </div> -->
             </div>
         </section>
     </main>
 
+    <!-- Footer de la page principale -->
     <footer>
+        <!-- Div qui organise les éléments du footer -->
         <div class="flex justify-between items-center w-full h-20 gap-6">
+            <!-- Div qui organise les liens du footer -->
             <div class="flex gap-4 ml-4">
+                <!-- Lien redirigeant vers la page de contact -->
                 <a href="pages\contact.html" class="text-base rounded p-1 text-text bg-primary25 px-2 hover:text-text hover:bg-cardBackground border border-primary hover:border-dashed active:border-solid">Contacter</a>
+
+                <!-- Lien redirigeant vers le haut de la page principale -->
                 <a href="index.html#" class="text-base rounded p-1 text-text bg-primary25 px-2 hover:text-text hover:bg-cardBackground border border-primary hover:border-dashed active:border-solid">Remonter en haut</a>
             </div>
+
+            <!-- Div qui organise l'affichage du prénom et de l'année -->
             <div class="mr-4 text-primary">
                 Antoine Nebout 2024
             </div>

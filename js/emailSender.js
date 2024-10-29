@@ -1,26 +1,15 @@
-function() {
-    emailjs.init("YOUR_USER_ID"); // Remplacez par votre ID utilisateur EmailJS
-};
-
-document.getElementById('contact-form').addEventListener('submit', function(event) {
+function sendMail() {
+    /*
+        Fonction qui envoie un mail à partir des informations saisies dans le formulaire de contact
+    */
     event.preventDefault();
-
-    // Récupérer les données du formulaire
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var message = document.getElementById('message').value;
-
-    // Envoyer les données via EmailJS
-    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
-        from_name: name,
-        from_email: email,
-        message: message
-    })
-    .then(function(response) {
-        console.log('SUCCESS!', response.status, response.text);
-        alert('Message envoyé avec succès!');
-    }, function(error) {
-        console.log('FAILED...', error);
-        alert('Échec de l\'envoi du message.');
-    });
-});
+        /* Envoi du mail en utilisant le service EmailJS lié à mon adresse mail, le template défini sur le site d'EmailJS et en récupérant les informations du formulaire de contact */
+        emailjs.sendForm('service_pplij5s', 'template_6ge5z9l', '#contact_form')
+            .then(() => {
+                alert('Le message a été correctement envoyé.'); // Affichage d'une fenêtre sur la page pour informer de la réussite de l'envoi
+            }, (error) => {
+                /* Affichage d'une fenêtre sur la page pour informer de l'échec de l'envoi */
+                alert('L\'envoie du message a échoué. Veuillez nous excusez, pouvez prendre contact via l\'adresse mail disponible en dessous du formulaire de contact.');
+                console.log('FAILED :', error);
+            });
+}

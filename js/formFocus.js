@@ -1,44 +1,55 @@
-const nameCard = document.getElementById('nameCard');
-const mailCard = document.getElementById('emailCard');
-const subjectCard = document.getElementById('subjectCard');
-const messageCard = document.getElementById('messageCard');
+/* Initialisation des constantes */
+const nameCard = document.getElementById('nameCard'); // Consante renvoyant à la div contenant le champ du nom
+const mailCard = document.getElementById('emailCard'); // Consante renvoyant à la div contenant le champ du mail
+const subjectCard = document.getElementById('subjectCard'); // Consante renvoyant à la div contenant le champ de l'objet
+const messageCard = document.getElementById('messageCard'); // Consante renvoyant à la div contenant le champ du message
 
+/* Initialisation des écouteurs d'événements liés à la sélection des champs de saisie du formulaire de contact */
+// Appel de la fonction 'showActiveInput' lorsque le champ d'indice 'name' est sélectionné
 document.getElementById('name').addEventListener('focus', function() {
     showActiveInput(0);
 });
 
-document.getElementById('name').addEventListener('blur', function() {
-    hideActiveInput(0);
-});
-
+// Appel de la fonction 'showActiveInput' lorsque le champ d'indice 'email' est sélectionné
 document.getElementById('email').addEventListener('focus', function() {
     showActiveInput(1);
 });
 
-document.getElementById('email').addEventListener('blur', function() {
-    hideActiveInput(1);
-});
-
+// Appel de la fonction 'showActiveInput' lorsque le champ d'indice 'subject' est sélectionné
 document.getElementById('subject').addEventListener('focus', function() {
     showActiveInput(2);
 });
 
-document.getElementById('subject').addEventListener('blur', function() {
-    hideActiveInput(2);
-});
-
+// Appel de la fonction 'showActiveInput' lorsque le champ d'indice 'message' est sélectionné
 document.getElementById('message').addEventListener('focus', function() {
     showActiveInput(3);
 });
 
+/* Initialisation des écouteurs d'événements liés à la désélection des champs de saisie du formulaire de contact */
+// Appel de la fonction 'hideActiveInput' lorsque le champ d'indice 'name' est désélectionné
+document.getElementById('name').addEventListener('blur', function() {
+    hideActiveInput(0);
+});
+
+// Appel de la fonction 'hideActiveInput' lorsque le champ d'indice 'email' est désélectionné
+document.getElementById('email').addEventListener('blur', function() {
+    hideActiveInput(1);
+});
+
+// Appel de la fonction 'hideActiveInput' lorsque le champ d'indice 'subject' est désélectionné
+document.getElementById('subject').addEventListener('blur', function() {
+    hideActiveInput(2);
+});
+
+// Appel de la fonction 'hideActiveInput' lorsque le champ d'indice 'message' est désélectionné
 document.getElementById('message').addEventListener('blur', function() {
     hideActiveInput(3);
 });
 
 function showActiveInput(input) {
     /*
-    Cette procédure prend en paramètre un entier compris entre 0 et 3 
-    et applique une bordure à la carte de l'input correspondant.
+        Cette fonction prend en paramètre un entier compris entre 0 et 3 
+        et applique une bordure à la carte de l'input correspondant.
     */
     switch (input) {
         case 0:
@@ -75,8 +86,8 @@ function showActiveInput(input) {
 
 function hideActiveInput(input) {
     /*
-    Cette procédure prend en paramètre un entier compris entre 0 et 3 
-    et enlève le style de la bordure de la carte de l'input correspondant.
+        Cette fonction prend en paramètre un entier compris entre 0 et 3 
+        et enlève le style de la bordure de la carte de l'input correspondant.
     */
     switch (input) {
         case 0:
