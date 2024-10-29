@@ -3,7 +3,7 @@ const openPortfolio = document.getElementById('project_portfolio');
 const openEsport = document.getElementById('project_esport');
 const openNSI = document.getElementById('project_nsi');
 const closePopup = document.getElementById('closePopup');
-const popup = document.getElementById('popup');
+const popupProjects = document.getElementById('projects_popup');
 
 /* Initialisation des écouteurs d'événements liés à l'ouverture de la popup détaillant les projets */
 // Appelle la fonction 'openPopup' lorsque la div du projet du portfolio personnel est cliquée
@@ -23,8 +23,8 @@ openNSI.addEventListener('click', () => {
 
 // Cache la popup lorsque le bouton 'Fermer' est cliqué
 closePopup.addEventListener('click', () => {
-    popup.classList.add('hidden');
-    popup.classList.remove('flex');
+    popupProjects.classList.add('hidden');
+    popupProjects.classList.remove('flex');
 });
 
 function openPopup(projectName) {
@@ -51,6 +51,6 @@ function openPopup(projectName) {
             break;
     }
 
-    popup.classList.remove('hidden');
-    popup.classList.add('flex');
+    popupProjects.classList.remove('hidden');
+    popupProjects.classList.add('flex');
 }

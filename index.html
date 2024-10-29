@@ -76,26 +76,19 @@
         </nav>
         
         <!-- Menu mobile sous la forme d'une popup activable/désactivable -->
-        <!-- <div id="menu_mobile_popup" class="bg-cardBackground rounded p-6 md:hidden hidden w-3/4 h-1/2 flex-col justify-center items-center gap-2 text-lg mt-2">
-            <a onclick="scrollToSectionMobile()" class="m-2 text-text hover:opacity-75" href="index.html#about_me">À propos</a>
-            <a onclick="scrollToSectionMobile()" class="m-2 text-text hover:opacity-75" href="index.html#skills">Compétences</a>
-            <a onclick="scrollToSectionMobile()" class="m-2 text-text hover:opacity-75" href="index.html#education_and_experience">Expériences</a>
-            <a onclick="scrollToSectionMobile()" class="m-2 text-text hover:opacity-75" href="index.html#projects">Projets</a>
-        </div> -->
-
         <div id="menu_mobile_popup" class="fixed inset-0 items-center justify-center bg-black bg-opacity-50 hidden z-50">
-            <div class="flex flex-col justify-around items-center bg-cardBackground text-text p-6 rounded shadow-lg w-3/4 h-1/2">
-                <div class="flex flex-col justify-center items-center gap-4">
-                    <a onclick="closeMenuMobile()" class="m-2 text-xl text-text hover:opacity-75" href="index.html#about_me">À propos</a>
-                    <a onclick="closeMenuMobile()" class="m-2 text-xl text-text hover:opacity-75" href="index.html#skills">Compétences</a>
-                    <a onclick="closeMenuMobile()" class="m-2 text-xl text-text hover:opacity-75" href="index.html#education_and_experience">Expériences</a>
-                    <a onclick="closeMenuMobile()" class="m-2 text-xl text-text hover:opacity-75" href="index.html#projects">Projets</a>
-                </div>
-                <div>
-                    <button onclick="closeMenuMobile()" class="text-base rounded p-1 text-cardBackground bg-text px-4 hover:text-text hover:bg-cardBackground border border-text hover:border-dashed active:border-solid">
-                        Fermer
-                    </button>
-                </div>
+            <!-- Div contenant les différents liens et bouton du menu -->
+            <div class="flex flex-col justify-center items-center bg-cardBackground text-text p-6 rounded shadow-lg w-3/4 h-fit gap-4">
+                <!-- Liens redirigeants vers les différentes sections de la page principale -->
+                <a onclick="closeMenuMobile()" class="m-2 text-xl text-text hover:opacity-75" href="index.html#about_me">À propos</a>
+                <a onclick="closeMenuMobile()" class="m-2 text-xl text-text hover:opacity-75" href="index.html#skills">Compétences</a>
+                <a onclick="closeMenuMobile()" class="m-2 text-xl text-text hover:opacity-75" href="index.html#education_and_experience">Expériences</a>
+                <a onclick="closeMenuMobile()" class="m-2 text-xl text-text hover:opacity-75" href="index.html#projects">Projets</a>
+
+                <!-- Bouton pour fermer la popup -->
+                <button onclick="closeMenuMobile()" class="text-base rounded p-1 text-cardBackground bg-text px-4 hover:text-text hover:bg-cardBackground border border-text hover:border-dashed active:border-solid mt-4">
+                    Fermer
+                </button>
             </div>
         </div>
     </header>
@@ -540,20 +533,27 @@
                     </div>
                 </div>
 
-                <div id="popup" class="fixed inset-0 items-center justify-center bg-black bg-opacity-50 hidden z-50">
-                    <div class="bg-cardBackground text-text p-6 rounded shadow-lg w-3/4 h-auto">
-                        <div class="flex flex-col items-center gap-4">
-                            <h3 id="project_title" class="text-2xl font-bold">
-                            </h3>
-                            <p id="project_description" class="text-justify md:w-3/4">
-                            </p>
-                            <div class="w-1/2 md:w-1/4 lg:w-1/5 xl:w-40">
-                                <img id="project_image" src="" alt="image du projet" class="rounded">
-                            </div>
-                            <button id="closePopup" class="text-base rounded p-1 text-text bg-primary25 px-4 hover:text-text hover:bg-cardBackground border border-primary hover:border-dashed active:border-solid">
-                                Fermer
-                            </button>
+                <!-- Div qui contient la popup des projets -->
+                <div id="projects_popup" class="fixed inset-0 items-center justify-center bg-black bg-opacity-50 hidden z-50">
+                    <!-- Div qui représente la popup des projets et qui contient son contenu -->
+                    <div class="bg-cardBackground text-text p-6 rounded shadow-lg w-3/4 h-auto flex flex-col items-center gap-4">
+                        <!-- Titre du projet -->
+                        <h3 id="project_title" class="text-2xl font-bold text-center">
+                        </h3>
+
+                        <!-- Description du projet -->
+                        <p id="project_description" class="text-justify md:w-3/4">
+                        </p>
+
+                        <!-- Image du projet -->
+                        <div class="w-1/2 md:w-1/4 lg:w-1/5 xl:w-40">
+                            <img id="project_image" src="" alt="image du projet" class="rounded">
                         </div>
+
+                        <!-- Bouton pour fermer la popup -->
+                        <button id="closePopup" class="text-base rounded p-1 text-text bg-primary25 px-4 hover:text-text hover:bg-cardBackground border border-primary hover:border-dashed active:border-solid">
+                            Fermer
+                        </button>
                     </div>
                 </div>
             </div>
@@ -564,13 +564,10 @@
     <footer>
         <!-- Div qui organise les éléments du footer -->
         <div class="flex justify-between items-center w-full h-20 gap-6">
-            <!-- Div qui organise les liens du footer -->
-            <div class="flex gap-4 ml-4">
-                <!-- Lien redirigeant vers la page de contact -->
-                <a href="pages\contact.html" class="text-base rounded p-1 text-text bg-primary25 px-2 hover:text-text hover:bg-cardBackground border border-primary hover:border-dashed active:border-solid">Contacter</a>
-
+            <!-- Div qui organise le lien du footer -->
+            <div class="text-base rounded p-1 text-text bg-primary25 px-2 hover:text-text hover:bg-cardBackground border border-primary hover:border-dashed active:border-solid ml-4">
                 <!-- Lien redirigeant vers le haut de la page principale -->
-                <a href="index.html#" class="text-base rounded p-1 text-text bg-primary25 px-2 hover:text-text hover:bg-cardBackground border border-primary hover:border-dashed active:border-solid">Remonter en haut</a>
+                <a href="index.html#" class="">Remonter en haut</a>
             </div>
 
             <!-- Div qui organise l'affichage du prénom et de l'année -->
