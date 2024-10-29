@@ -5,43 +5,43 @@ const subjectCard = document.getElementById('subjectCard'); // Consante renvoyan
 const messageCard = document.getElementById('messageCard'); // Consante renvoyant à la div contenant le champ du message
 
 /* Initialisation des écouteurs d'événements liés à la sélection des champs de saisie du formulaire de contact */
-// Appel de la fonction 'showActiveInput' lorsque le champ d'indice 'name' est sélectionné
+// Appelle de la fonction 'showActiveInput' lorsque le champ d'indice 'name' est sélectionné
 document.getElementById('name').addEventListener('focus', function() {
     showActiveInput(0);
 });
 
-// Appel de la fonction 'showActiveInput' lorsque le champ d'indice 'email' est sélectionné
+// Appelle de la fonction 'showActiveInput' lorsque le champ d'indice 'email' est sélectionné
 document.getElementById('email').addEventListener('focus', function() {
     showActiveInput(1);
 });
 
-// Appel de la fonction 'showActiveInput' lorsque le champ d'indice 'subject' est sélectionné
+// Appelle de la fonction 'showActiveInput' lorsque le champ d'indice 'subject' est sélectionné
 document.getElementById('subject').addEventListener('focus', function() {
     showActiveInput(2);
 });
 
-// Appel de la fonction 'showActiveInput' lorsque le champ d'indice 'message' est sélectionné
+// Appelle de la fonction 'showActiveInput' lorsque le champ d'indice 'message' est sélectionné
 document.getElementById('message').addEventListener('focus', function() {
     showActiveInput(3);
 });
 
 /* Initialisation des écouteurs d'événements liés à la désélection des champs de saisie du formulaire de contact */
-// Appel de la fonction 'hideActiveInput' lorsque le champ d'indice 'name' est désélectionné
+// Appelle de la fonction 'hideActiveInput' lorsque le champ d'indice 'name' est désélectionné
 document.getElementById('name').addEventListener('blur', function() {
     hideActiveInput(0);
 });
 
-// Appel de la fonction 'hideActiveInput' lorsque le champ d'indice 'email' est désélectionné
+// Appelle de la fonction 'hideActiveInput' lorsque le champ d'indice 'email' est désélectionné
 document.getElementById('email').addEventListener('blur', function() {
     hideActiveInput(1);
 });
 
-// Appel de la fonction 'hideActiveInput' lorsque le champ d'indice 'subject' est désélectionné
+// Appelle de la fonction 'hideActiveInput' lorsque le champ d'indice 'subject' est désélectionné
 document.getElementById('subject').addEventListener('blur', function() {
     hideActiveInput(2);
 });
 
-// Appel de la fonction 'hideActiveInput' lorsque le champ d'indice 'message' est désélectionné
+// Appelle de la fonction 'hideActiveInput' lorsque le champ d'indice 'message' est désélectionné
 document.getElementById('message').addEventListener('blur', function() {
     hideActiveInput(3);
 });
