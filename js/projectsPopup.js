@@ -8,7 +8,11 @@ const popupProjects = document.getElementById('projects_popup');
 /* Initialisation des écouteurs d'événements liés à l'ouverture de la popup détaillant les projets */
 // Appelle la fonction 'openPopup' lorsque la div du projet du portfolio personnel est cliquée
 openPortfolio.addEventListener('click', () => {
-    openPopup('portfolio');
+    if (document.getElementById('project_title').innerHTML.trim() != 'Portfolio personnel') {
+        openPopup('portfolio');
+    } else {
+        openPopup('none');
+    }
 });
 
 // Appelle la fonction 'openPopup' lorsque la div du projet du site wordpress est cliquée
@@ -28,6 +32,9 @@ closePopup.addEventListener('click', () => {
 });
 
 function openPopup(projectName) {
+    /*
+        Fonction qui affiche la popup des projet et qui charge le contenu relatif au projet souhaité
+    */
     switch (projectName) {
         case 'portfolio':
 			document.getElementById('project_title').innerHTML = "Portfolio personnel";
