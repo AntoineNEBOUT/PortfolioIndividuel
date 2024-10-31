@@ -543,18 +543,36 @@
                     <!-- Div qui représente la popup des projets et qui contient son contenu -->
                     <div class="bg-cardBackground text-text p-6 rounded shadow-lg w-3/4 h-auto flex flex-col items-center gap-4">
                         <!-- Titre du projet -->
-                        <h3 id="project_title" class="text-2xl font-bold text-center">
+                        <h3 id="project_title_portfolio" class="text-2xl font-bold text-center">
                             Portfolio personnel
+                        </h3>
+                        <h3 id="project_title_esport" class="text-2xl font-bold text-center hidden">
+                            Site vitrine pour une équipe d'esport
+                        </h3>
+                        <h3 id="project_title_nsi" class="text-2xl font-bold text-center hidden">
+                            Gestionnaire de tournoi - Les Trophées NSI 2024
                         </h3>
 
                         <!-- Description du projet -->
-                        <p id="project_description" class="text-justify md:w-3/4">
+                        <p id="project_description_portfolio" class="text-justify md:w-3/4">
                             Il s’agit d’un projet dont l’objectif est d’aboutir à la création d’un portfolio personnel. Il m’a permis de mettre en pratique mes compétences organisationnelles et de design avec Figma. Ce projet s’inscrit dans un projet plus important, celui de réaliser à terme : un portfolio commun pour notre promotion.
+                        </p>
+                        <p id="project_description_esport" class="text-justify md:w-3/4 hidden">
+                            Il s’agit d’un projet visant à réaliser un site web en utilisant WordPress. Cela comprend la rédaction de différents documents tels qu’un cahier des charges et des spécifications fonctionnelles. Ce projet complet nous a permis de mettre en pratique à la fois nos compétences en gestion de projet et en développement.
+                        </p>
+                        <p id="project_description_nsi" class="text-justify md:w-3/4 hidden">
+                            Il s'agit d'un projet de logiciel collaboratif et communautaire de gestion et de visualisation de tournois. C'est une application de bureau développée avec Python associé à PyQt5. Ce projet a eu lieu dans le cadre du concours ”Les Trophées NSI” (2024).
                         </p>
 
                         <!-- Image du projet -->
-                        <div class="w-1/2 md:w-1/4 lg:w-1/5 xl:w-40">
+                        <div id="project_image_portfolio" class="w-1/2 md:w-1/4 lg:w-1/5 xl:w-40">
                             <img id="project_image" src="images\\projectsPictures\\portfolioLogo.avif" alt="image du projet" class="rounded">
+                        </div>
+                        <div id="project_image_esport" class="w-1/2 md:w-1/4 lg:w-1/5 xl:w-40 hidden">
+                            <img id="project_image" src="images\\projectsPictures\\g4EsportLyonLogo.png" alt="image du projet" class="rounded">
+                        </div>
+                        <div id="project_image_nsi" class="w-1/2 md:w-1/4 lg:w-1/5 xl:w-40 hidden">
+                            <img id="project_image" src="images\\projectsPictures\\olympicTournamentImage.avif" alt="image du projet" class="rounded">
                         </div>
 
                         <!-- Bouton pour fermer la popup -->
