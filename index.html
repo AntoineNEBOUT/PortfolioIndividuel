@@ -125,10 +125,13 @@
                     Je suis un étudiant en conception et développement d’applications passionné par le développement et la gestion de projet.
                 </div>
 
-                <!-- Bouton pour télécharger le CV -->
-                <button type="button" class="max-md:mb-3 rounded bg-primary text-background py-2 px-3 active:bg-background active:text-primary active:border-solid border border-primary font-sans transform transition-transform duration-500 hover:scale-105">
-                    Télécharger mon CV
-                </button>
+                <!-- Lien pour télécharger le CV -->
+                <a href="downloads\CV Développeur Fullstack.pdf" download="CV Développeur Fullstack.pdf" target="_blank">
+                    <!-- Bouton pour télécharger le CV (sert pour le rendu visuel) -->
+                    <button type="button" class="max-md:mb-3 rounded bg-primary text-background py-2 px-3 active:bg-background active:text-primary active:border-solid border border-primary font-sans transform transition-transform duration-500 hover:scale-105">
+                        Télécharger mon CV
+                    </button>
+                </a>
             </div>
         </section>
         
@@ -542,7 +545,7 @@
                 <div id="projects_popup" class="fixed inset-0 items-center justify-center bg-black bg-opacity-50 hidden z-50">
                     <!-- Div qui représente la popup des projets et qui contient son contenu -->
                     <div class="bg-cardBackground text-text p-6 rounded shadow-lg w-3/4 h-auto flex flex-col items-center gap-4">
-                        <!-- Titre du projet -->
+                        <!-- Titre des projets -->
                         <h3 id="project_title_portfolio" class="text-2xl font-bold text-center">
                             Portfolio personnel
                         </h3>
@@ -553,7 +556,7 @@
                             Gestionnaire de tournoi - Les Trophées NSI 2024
                         </h3>
 
-                        <!-- Description du projet -->
+                        <!-- Description des projets -->
                         <p id="project_description_portfolio" class="text-justify md:w-3/4">
                             Il s’agit d’un projet dont l’objectif est d’aboutir à la création d’un portfolio personnel. Il m’a permis de mettre en pratique mes compétences organisationnelles et de design avec Figma. Ce projet s’inscrit dans un projet plus important, celui de réaliser à terme : un portfolio commun pour notre promotion.
                         </p>
@@ -564,7 +567,7 @@
                             Il s'agit d'un projet de logiciel collaboratif et communautaire de gestion et de visualisation de tournois. C'est une application de bureau développée avec Python associé à PyQt5. Ce projet a eu lieu dans le cadre du concours ”Les Trophées NSI” (2024).
                         </p>
 
-                        <!-- Image du projet -->
+                        <!-- Image des projets -->
                         <div id="project_image_portfolio" class="w-1/2 md:w-1/4 lg:w-1/5 xl:w-40">
                             <img id="project_image" src="images\\projectsPictures\\portfolioLogo.avif" alt="image du projet" class="rounded">
                         </div>
@@ -576,7 +579,7 @@
                         </div>
 
                         <!-- Bouton pour fermer la popup -->
-                        <button id="closePopup" class="text-base rounded p-1 text-text bg-primary25 px-4 hover:text-text hover:bg-cardBackground border border-primary hover:border-dashed active:border-solid">
+                        <button onclick="closePopup()" class="text-base rounded p-1 text-text bg-primary25 px-4 hover:text-text hover:bg-cardBackground border border-primary hover:border-dashed active:border-solid">
                             Fermer
                         </button>
                     </div>
