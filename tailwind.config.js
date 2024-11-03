@@ -34,9 +34,6 @@ module.exports = {
 			'281': '281px'
 		}
 	},
-  },
-  plugins: [
-	require('tailwindcss-animated')
-  ],
+  }
 }
 

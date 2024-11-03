@@ -14,6 +14,7 @@ function changeTheme() {
     /*
         Fonction qui change le thème de la page
     */
+   
     if (isDark) { // Vérification de l'état actuel de la page
         isDark = false;
         setCookie('darkMode', 'false', 7); // Modification du cookie du site

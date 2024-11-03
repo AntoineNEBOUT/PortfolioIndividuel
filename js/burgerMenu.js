@@ -26,6 +26,7 @@ function closeMenuMobile() {
 	/*
 		Fonction qui cache le menu mobile. Elle est utilisée lorsqu'un lien du menu est cliqué
 	*/
+	
     document.getElementById('toggle_popup').checked = false; // Décochage du menu burger
     menuMobile.classList.add('hidden');
     pageHeader.classList.remove('h-full');

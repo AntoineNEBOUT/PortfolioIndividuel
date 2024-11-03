@@ -51,6 +51,7 @@ function showActiveInput(input) {
         Cette fonction prend en paramètre un entier compris entre 0 et 3 
         et applique une bordure à la carte de l'input correspondant.
     */
+
     switch (input) {
         case 0:
             nameCard.classList.remove('border-background');
@@ -89,6 +90,7 @@ function hideActiveInput(input) {
         Cette fonction prend en paramètre un entier compris entre 0 et 3 
         et enlève le style de la bordure de la carte de l'input correspondant.
     */
+   
     switch (input) {
         case 0:
             nameCard.classList.add('border-background');

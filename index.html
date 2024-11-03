@@ -14,7 +14,7 @@
     <!-- Importation de la feuille de style du site -->
     <link href="css\tailwind.css" rel="stylesheet">
     <!-- Importation de la feuille de style de AOS (Animate On Scroll) -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
 
     <!-- Icône de la page principale -->
     <link rel="icon" href="icon\profile.ico">
@@ -25,14 +25,14 @@
 
 <!-- Body (corps = contenu) de la page de contact -->
 <body id="body_index" class="bg-background overflow-x-hidden font-sans">
-    <div class="fixed bottom-4 left-4">
+    <!-- <div class="fixed bottom-4 left-4">
         <span class="sm:hidden">XS</span>
         <span class="hidden sm:block md:hidden">SM</span>
         <span class="hidden md:block lg:hidden">MD</span>
         <span class="hidden lg:block xl:hidden">LG</span>
         <span class="hidden xl:block 2xl:hidden">XL</span>
         <span class="hidden 2xl:block 3xl:hidden">2XL</span>
-    </div>
+    </div> -->
 
     <!-- Header de la page principale (index.html) -->
     <header class="flex flex-col items-center fixed top-0 w-full z-50 gap-0">
@@ -65,7 +65,7 @@
 
             <!-- Bouton contacter -->
             <button type="button" onclick="window.location.href='pages\\contact.html';" class="text-text text-lg max-md:hover:opacity-75 md:text-base md:rounded md:p-1 md:text-background md:bg-text md:px-2 md:hover:text-text md:hover:bg-background md:border md:border-text md:hover:border-dashed md:active:border-solid">
-                Contacter
+                Contact
             </button>
 
             <!-- Menu burger pour les appareils mobiles provient de : https://uiverse.io/Shubh0408/pink-cobra-51 -->
@@ -126,13 +126,14 @@
                 </div>
 
                 <!-- Lien pour télécharger le CV -->
-                <!-- <a href="downloads\CV Développeur Fullstack.pdf" download="CV Développeur Fullstack.pdf" target="_blank">
-                </a> -->
+                <a href="downloads\CV Développeur Fullstack.pdf" download="CV Développeur Fullstack.pdf" target="_blank" class="text-center max-md:mb-3 rounded bg-primary text-background py-2 px-3 active:bg-background active:text-primary active:border-solid border border-primary font-sans transform transition-transform duration-500 hover:scale-105">
+                    Télécharger mon CV
+                </a>
                 
                 <!-- Bouton pour télécharger le CV (sert pour le rendu visuel) -->
-                <button type="button" class="max-md:mb-3 rounded bg-primary text-background py-2 px-3 active:bg-background active:text-primary active:border-solid border border-primary font-sans transform transition-transform duration-500 hover:scale-105">
+                <!-- <button type="button" class="max-md:mb-3 rounded bg-primary text-background py-2 px-3 active:bg-background active:text-primary active:border-solid border border-primary font-sans transform transition-transform duration-500 hover:scale-105">
                     Télécharger mon CV
-                </button>
+                </button> -->
             </div>
         </section>
         
@@ -246,22 +247,21 @@
 
             <!-- Div qui gère toutes les compétences relatives aux framworks -->
             <div class="flex justify-center">
-                <div class="flex-col justify-center rounded max-md:w-3/4 md:w-fit md:h-fit">
-                    <div class="flex justify-center items-center flex-wrap gap-7">
-                        <div class="flex justify-center items-center flex-wrap gap-7">
-                            <!-- Div qui contient et gère l'icône de TailwindCSS -->
-                            <div data-aos="fade-up-right" data-aos-duration="2000">
-                                <div class="border border-primary rounded p-4 bg-primary25 transform transition-transform duration-500 hover:translate-y-3 hover:shadow-md flex justify-center items-center w-20 h-20">
-                                    <img src="images\skillsPictures\frameworks\tailwindcss.svg" alt="icône tailwindcss">
-                                </div>
+                <div class="flex-col justify-center rounded w-3/4 md:w-fit md:h-fit">
+                    <div class="flex justify-center items-center gap-7">
+                        <!-- Div qui contient et gère l'icône de TailwindCSS -->
+                        <div data-aos="fade-up-right" data-aos-duration="2000">
+                            <div class="border border-primary rounded p-4 bg-primary25 transform transition-transform duration-500 hover:translate-y-3 hover:shadow-md flex justify-center items-center w-20 h-20">
+                                <img src="images\skillsPictures\frameworks\tailwindcss.svg" alt="icône tailwindcss">
                             </div>
-                            
+                        </div>
+                        
                         <!-- Div qui contient et gère l'icône de Qt -->
-                            <div data-aos="fade-up-left" data-aos-duration="2000">
-                                <div class="border border-primary rounded p-4 bg-primary25 transform transition-transform duration-500 hover:translate-y-3 hover:shadow-md flex justify-center items-center w-20 h-20">
-                                    <img src="images\skillsPictures\frameworks\qt.svg" alt="icône qt">
-                                </div>
+                        <div data-aos="fade-up-left" data-aos-duration="2000">
+                            <div class="border border-primary rounded p-4 bg-primary25 transform transition-transform duration-500 hover:translate-y-3 hover:shadow-md flex justify-center items-center w-20 h-20">
+                                <img src="images\skillsPictures\frameworks\qt.svg" alt="icône qt">
                             </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -281,7 +281,7 @@
                 <!-- Div qui contient les formations -->
                 <div class="flex flex-col gap-4 w-3/4 md:w-2/3 justify-self-center lg:justify-self-end">
                     <!-- Titre de la sous-catégorie -->
-                    <h3 class="text-text text-center font-bold font-sans text-2xl justify-self-center md:hidden">
+                    <h3 class="text-text text-center font-bold font-sans text-2xl justify-self-center">
                         Formations
                     </h3>
 
@@ -307,7 +307,7 @@
 
                             <!-- Div qui contient l'image de l'Institut G4 -->
                             <div class="flex items-center bg-opacity-50 backdrop-blur-md border border-primary rounded p-4 w-36 h-36 transform transition-transform duration-200 hover:scale-[1.02] hover:shadow-md">
-                                <img src="images\educationPicture\g4Logo.png" alt="image de ND De Mongré" class="rounded">
+                                <img src="images\educationPicture\g4Logo.png" alt="image de l'Institut G4" class="rounded w-28 h-28">
                             </div>
                         </div>
                     </div>
@@ -333,7 +333,7 @@
                             
                             <!-- Div qui contient l'image du Lycée ND de Mongré -->
                             <div class="flex items-center bg-opacity-50 backdrop-blur-md border border-primary rounded p-4 w-36 h-36 transform transition-transform duration-200 hover:scale-[1.02] hover:shadow-md">
-                                <img src="images\educationPicture\school.avif" alt="image de ND De Mongré" class="rounded">
+                                <img src="images\educationPicture\school.avif" alt="image de ND De Mongré" class="rounded w-28 h-28">
                             </div>
                             
                         </div>
@@ -341,7 +341,7 @@
                 </div>
 
                 <div class="flex flex-col gap-4 w-3/4 md:w-2/3 justify-between justify-self-center lg:justify-self-start">
-                    <h3 class="text-text text-center font-bold font-sans text-2xl md:hidden">
+                    <h3 class="text-text text-center font-bold font-sans text-2xl">
                         Expériences
                     </h3>
 
@@ -365,8 +365,8 @@
                             </div>
                             
                             <!-- Div qui contient le logo du Technicentre TGV de Lyon -->
-                            <div class="flex items-center bg-opacity-50 backdrop-blur-md border border-primary rounded p-4 w-36 h-36 transform transition-transform duration-200 hover:scale-[1.02] hover:shadow-md">
-                                <img src="images\experiencePicture\sncf.avif" alt="logo technicentre lyon" class="rounded">
+                            <div class="flex items-center bg-opacity-50 backdrop-blur-md border border-primary rounded w-36 h-36 p-4 transform transition-transform duration-200 hover:scale-[1.02] hover:shadow-md">
+                                <img src="images\experiencePicture\sncf.webp" alt="logo technicentre lyon" class="rounded w-28 h-auto">
                             </div>
                             
                         </div>
@@ -393,7 +393,7 @@
                             
                             <!-- Div qui contient le logo de ENEDIS -->
                             <div class="flex items-center bg-opacity-50 backdrop-blur-md border border-primary rounded p-4 w-36 h-36 transform transition-transform duration-200 hover:scale-[1.02] hover:shadow-md">
-                                <img src="images\experiencePicture\enedis.avif" alt="logo endis" class="rounded">
+                                <img src="images\experiencePicture\enedis.avif" alt="logo endis" class="rounded w-28 h-28">
                             </div>
                         </div>
                     </div>
@@ -615,10 +615,12 @@
     <!-- Importation du script qui permet de modifier dynamiquement le détail des projets -->
     <script src="js/projectsPopup.js"></script>
 
+    <script src="js/animationController.js"></script>
+
     <!-- Importation et initialisation des scripts de AOS (Animate On Scroll) -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
-    </script>
+    </script> -->
 </body>
 </html>
