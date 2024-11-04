@@ -288,7 +288,7 @@
                             <!-- Div qui contient les informations textuelles liées à la formation -->
                             <div class="flex flex-col gap-4 w-full bg-opacity-50 backdrop-blur-md border border-primary rounded p-4 transform transition-transform duration-200 hover:scale-[1.01] hover:shadow-md">
                                 <h4 class="text-text font-bold font-sans text-2xl text-center">
-                                    Développeur web
+                                    Développeur d'applications
                                 </h4>
                                 <h5 class="text-text font-sans text-lg text-center">
                                     Institut G4 Lyon - Bachelor
@@ -347,7 +347,7 @@
                             <!-- Div qui contient les informations textuelles liées à l'expérience -->
                             <div class="flex flex-col gap-4 w-full bg-opacity-50 backdrop-blur-md border border-primary rounded p-4 transform transition-transform duration-200 hover:scale-[1.01] hover:shadow-md">
                                 <h4 class="text-text font-bold font-sans text-2xl text-center">
-                                    Alternant Informatique
+                                    Alternant Concepteur d'Applications
                                 </h4>
                                 <h5 class="text-text font-sans text-lg text-center">
                                     Technicentre TGV de Lyon
@@ -406,12 +406,18 @@
             <!-- Grille qui contient et organise les projets -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-9 mx-auto w-3/4 md:pt-32">
                 <!-- Div qui contient le projet du portfolio personnel -->
-                <div class="relative w-full md:w-full h-auto group">
+                <div class="relative w-full md:w-full h-auto group cursor-pointer">
                     <!-- Div qui correspond au fond décalé par rapport au contenu -->
                     <div class="rounded w-full h-full bg-primary25 border-primary border absolute right-0 bottom-0 transform transition-transform duration-500 group-hover:-translate-x-6 group-hover:-translate-y-6">
-                        <p class="text-text mx-2 font-semibold">
-                            Cliquez pour en savoir plus
-                        </p>
+                        <div class="flex items-center h-fit w-fit">
+                            <p class="text-text mx-2 font-semibold">
+                                En savoir plus
+                            </p>
+                            <div class="w-4 h-4">
+                                <img src="images\others\newPage_light.svg" alt="icône sombre pour ouvrir la popup" class="dark:hidden">
+                                <img src="images\others\newPage_dark.svg" alt="icône clair pour ouvrir la popup" class="hidden dark:block">
+                            </div>
+                        </div>
                     </div>
                     
                     <!-- Div qui contient les informations liées au projet -->
@@ -429,22 +435,22 @@
                         <!-- Icônes des compétences utilisées sur ce projet -->
                         <div class="flex justify-center items-center flex-wrap gap-4">
                             <!-- Div qui gère l'icône de HTML -->
-                            <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12">
+                            <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12 cursor-default">
                                 <img src="images\skillsPictures\programmingLangages\html5.svg" alt="icône html">
                             </div>
                             
                             <!-- Div qui gère l'icône de TailwindCSS -->
-                            <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12">
+                            <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12 cursor-default">
                                 <img src="images\skillsPictures\frameworks\tailwindcss.svg" alt="icône tailwindcss">
                             </div>
                             
                             <!-- Div qui gère l'icône de Visual Studio Code -->
-                            <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12">
+                            <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12 cursor-default">
                                 <img src="images\skillsPictures\tools\vscode.svg" alt="icône visual studio code">
                             </div>
                             
                             <!-- Div qui gère l'icône de GitHub -->
-                            <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12">
+                            <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12 cursor-default">
                                 <img src="..\images\skillsPictures\tools\Github_light.svg" alt="icône de GitHub" class="dark:hidden">
                                 <img src="..\images\skillsPictures\tools\Github_dark.svg" alt="icône de GitHub" class="hidden dark:block">
                             </div>
@@ -453,12 +459,18 @@
                 </div>
                 
                 <!-- Div qui contient le projet du site vitrine pour une équipe d'esport fictive -->
-                <div class="relative w-full h-auto group">
+                <div class="relative w-full h-auto group cursor-pointer">
                     <!-- Div qui correspond au fond décalé par rapport au contenu -->
-                    <div class="rounded w-full h-full bg-primary25 border-primary border absolute right-0 bottom-0 transform transition-transform duration-500 group-hover:-translate-x-6 group-hover:-translate-y-6 md:group-hover:translate-x-6 md:group-hover:-translate-y-6 lg:group-hover:-translate-x-0 lg:group-hover:-translate-y-6">
-                        <p class="text-text mx-2 font-semibold">
-                            Cliquez pour en savoir plus
-                        </p>
+                    <div class="rounded w-full h-full bg-primary25 border-primary border absolute right-0 bottom-0 transform transition-transform duration-500 group-hover:-translate-x-6 group-hover:-translate-y-6 ">
+                        <div class="flex items-center h-fit w-fit">
+                            <p class="text-text mx-2 font-semibold">
+                                En savoir plus
+                            </p>
+                            <div class="w-4 h-4">
+                                <img src="images\others\newPage_light.svg" alt="icône sombre pour ouvrir la popup" class="dark:hidden">
+                                <img src="images\others\newPage_dark.svg" alt="icône clair pour ouvrir la popup" class="hidden dark:block">
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Div qui contient les informations liées au projet -->
@@ -476,12 +488,12 @@
                         <!-- Icônes des compétences utilisées sur ce projet -->
                         <div class="flex justify-center items-center flex-wrap gap-4">
                             <!-- Div qui gère l'icône de WordPress -->
-                            <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12">
+                            <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12 cursor-default">
                                 <img src="images\skillsPictures\tools\wordpress.svg" alt="icône wordpress">
                             </div>
                             
                             <!-- Div qui gère l'icône de HTML -->
-                            <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12">
+                            <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12 cursor-default">
                                 <img src="images\skillsPictures\programmingLangages\html5.svg" alt="icône html">
                             </div>
                         </div>
@@ -489,12 +501,18 @@
                 </div>
                 
                 <!-- Div qui contient le projet du gestionnaire de tournoi -->
-                <div class="relative w-full h-auto group">
+                <div class="relative w-full h-auto group cursor-pointer">
                     <!-- Div qui correspond au fond décalé par rapport au contenu -->
-                    <div class="rounded w-full h-full bg-primary25 border-primary border absolute right-0 bottom-0 transform transition-transform duration-500 group-hover:-translate-x-6 group-hover:-translate-y-6  lg:group-hover:translate-x-6 lg:group-hover:-translate-y-6">
-                        <p class="text-text mx-2 font-semibold">
-                            Cliquez pour en savoir plus
-                        </p>
+                    <div class="rounded w-full h-full bg-primary25 border-primary border absolute right-0 bottom-0 transform transition-transform duration-500 group-hover:-translate-x-6 group-hover:-translate-y-6">
+                        <div class="flex items-center h-fit w-fit">
+                            <p class="text-text mx-2 font-semibold">
+                                En savoir plus
+                            </p>
+                            <div class="w-4 h-4">
+                                <img src="images\others\newPage_light.svg" alt="icône sombre pour ouvrir la popup" class="dark:hidden">
+                                <img src="images\others\newPage_dark.svg" alt="icône clair pour ouvrir la popup" class="hidden dark:block">
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Div qui contient les informations liés au projet -->
@@ -512,22 +530,22 @@
                         <!-- Icônes des compétences utilisées sur ce projet -->
                         <div class="flex justify-center items-center flex-wrap gap-4">
                             <!-- Div qui gère l'icône de Python -->
-                            <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12">
+                            <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12 cursor-default">
                                 <img src="images\skillsPictures\programmingLangages\python.svg" alt="icône python">
                             </div>
                             
                             <!-- Div qui gère l'icône de Qt -->
-                            <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12">
+                            <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12 cursor-default">
                                 <img src="images\skillsPictures\frameworks\qt.svg" alt="icône qt">
                             </div>
                             
                             <!-- Div qui gère l'icône de Visual Studio Code -->
-                            <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12">
+                            <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12 cursor-default">
                                 <img src="images\skillsPictures\tools\vscode.svg" alt="icône visual studio code">
                             </div>
                             
                             <!-- Div qui gère l'icône de GitHub -->
-                            <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12">
+                            <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12 cursor-default">
                                 <img src="..\images\skillsPictures\tools\Github_light.svg" alt="icône de GitHub" class="dark:hidden">
                                 <img src="..\images\skillsPictures\tools\Github_dark.svg" alt="icône de GitHub" class="hidden dark:block">
                             </div>

@@ -22,7 +22,7 @@
 </head>
 
 <!-- Body (corps = contenu) de la page de contact -->
-<body id="bodyContact" class="bg-background">
+<body id="bodyContact" class="bg-background lg:overflow-y-hidden">
     <!-- <div class="fixed bottom-4 left-4">
         <span class="sm:hidden">XS</span>
         <span class="hidden sm:block md:hidden">SM</span>
@@ -151,7 +151,8 @@
                 <a href="mailto:Antoine.NEBOUT@protonmail.com">
                     <!-- Div qui gère l'icône de mail -->
                     <div class="border border-primary rounded p-4 bg-primary25 transform transition-transform duration-200 hover:translate-y-3 hover:shadow-md flex justify-center items-center w-16 h-16">
-                        <img src="..\images\others\mailImage.png" alt="icône de mail">
+                        <img src="..\images\others\mail_light.svg" alt="icône de mail" class="w-auto h-10 rounded dark:hidden">
+                        <img src="..\images\others\mail_dark.svg" alt="icône de mail" class="hidden w-auto h-10 rounded dark:block">
                     </div>
                 </a>
                 
@@ -159,7 +160,8 @@
                 <a href="https://www.linkedin.com/in/antoine-nebout/" target="_blank">
                     <!-- Div qui gère l'icône de Linkedin -->
                     <div class="border border-primary rounded p-4 bg-primary25 transform transition-transform duration-200 hover:translate-y-3 hover:shadow-md flex justify-center items-center w-16 h-16">
-                        <img src="..\images\others\linkedin.svg" alt="icône de Linkedin">
+                        <img src="..\images\others\linkedin_light.svg" alt="icône de Linkedin" class="w-auto h-10 rounded dark:hidden">
+                        <img src="..\images\others\linkedin_dark.svg" alt="icône de Linkedin" class="hidden w-auto h-10 rounded dark:block">
                     </div>
                 </a>
 
