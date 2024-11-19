@@ -22,7 +22,7 @@
 </head>
 
 <!-- Body (corps = contenu) de la page de contact -->
-<body id="body_index" class="bg-background overflow-x-hidden font-sans">
+<body id="body_index" class="bg-background overflow-x-hidden font-sans relative">
     <!-- <div class="fixed bottom-4 left-4">
         <span class="sm:hidden">XS</span>
         <span class="hidden sm:block md:hidden">SM</span>
@@ -281,7 +281,7 @@
                 <!-- Div qui contient les formations -->
                 <div class="flex flex-col gap-4 w-3/4 md:w-2/3 justify-self-center lg:justify-self-end">
                     <!-- Titre de la sous-catégorie -->
-                    <h3 class="text-text text-center font-bold font-sans text-2xl justify-self-center">
+                    <h3 class="text-primary text-center font-bold font-sans text-2xl justify-self-center">
                         Formations
                     </h3>
 
@@ -341,7 +341,7 @@
                 </div>
 
                 <div class="flex flex-col gap-4 w-3/4 md:w-2/3 justify-between justify-self-center lg:justify-self-start">
-                    <h3 class="text-text text-center font-bold font-sans text-2xl">
+                    <h3 class="text-primary text-center font-bold font-sans text-2xl">
                         Expériences
                     </h3>
 
@@ -417,7 +417,7 @@
                     <!-- Div qui correspond au fond décalé par rapport au contenu -->
                     <div class="rounded w-full h-full bg-primary25 border-primary border absolute right-0 bottom-0 transform transition-transform duration-500 group-hover:-translate-x-6 group-hover:-translate-y-6">
                         <div class="flex items-center h-fit w-fit">
-                            <p class="text-text mx-2 font-semibold">
+                            <p class="text-primaryGray mx-2 font-semibold">
                                 En savoir plus
                             </p>
                             <div class="w-4 h-4">
@@ -470,7 +470,7 @@
                     <!-- Div qui correspond au fond décalé par rapport au contenu -->
                     <div class="rounded w-full h-full bg-primary25 border-primary border absolute right-0 bottom-0 transform transition-transform duration-500 group-hover:-translate-x-6 group-hover:-translate-y-6 ">
                         <div class="flex items-center h-fit w-fit">
-                            <p class="text-text mx-2 font-semibold">
+                            <p class="text-primaryGray mx-2 font-semibold">
                                 En savoir plus
                             </p>
                             <div class="w-4 h-4">
@@ -512,7 +512,7 @@
                     <!-- Div qui correspond au fond décalé par rapport au contenu -->
                     <div class="rounded w-full h-full bg-primary25 border-primary border absolute right-0 bottom-0 transform transition-transform duration-500 group-hover:-translate-x-6 group-hover:-translate-y-6">
                         <div class="flex items-center h-fit w-fit">
-                            <p class="text-text mx-2 font-semibold">
+                            <p class="text-primaryGray mx-2 font-semibold">
                                 En savoir plus
                             </p>
                             <div class="w-4 h-4">
@@ -604,7 +604,14 @@
                     </div>
                 </div>
             </div>
-        </section>        
+        </section>
+
+        <div id="arrow" class="flex justify-center items-center w-full mb-12 fixed bottom-0 left-0 max-lg:hidden cursor-pointer" onclick="document.getElementById('skills').scrollIntoView({ behavior: 'smooth' })">
+            <div class="group w-20 h-20 flex justify-center items-center transform transition-transform duration-500 hover:translate-y-3 animate-pulse">
+                <img src="..\images\others\arrowLigth.svg" alt="icône de GitHub" class="dark:hidden group-hover:drop-shadow-lg">
+                <img src="..\images\others\arrowDark.svg" alt="icône de GitHub" class="hidden dark:block group-hover:drop-shadow-lg">
+            </div>
+        </div>        
     </main>
 
     <!-- Footer de la page principale -->
@@ -632,5 +639,8 @@
 
     <!-- Importation du script qui permet de modifier dynamiquement le détail des projets -->
     <script src="js/projectsPopup.js"></script>
+
+    <!--  -->
+    <script src="js/arrow.js"></script>
 </body>
 </html>

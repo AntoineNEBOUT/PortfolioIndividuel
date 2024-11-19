@@ -13,6 +13,7 @@
       --secondary: #5f8ef1;
       /* --secondary: #C4D5F2; */
       --accent: #00a1ff;
+      --primaryGray: #648a8a;
     }
     .dark {
       --text: #e4e7e7;
@@ -23,6 +24,7 @@
       --secondary: #0e3ca0;
       /* --secondary: #0B1D3A; */
       --accent: #00a1ff;
+      --primaryGray: #bedad9;
     }
 }
 .activeNavBar{

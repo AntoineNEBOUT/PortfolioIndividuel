@@ -18,6 +18,7 @@ module.exports = {
 			'primary25': 'var(--primary25)',
 			'secondary': 'var(--secondary)',
 			'accent': 'var(--accent)',
+			'primaryGray': 'var(--primaryGray)',
 			},
 
 		borderRadius: {
