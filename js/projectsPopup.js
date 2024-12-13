@@ -1,4 +1,5 @@
 /* Initialisation des constantes */
+const openPortfolioCollectif = document.getElementById('project_portfolio_collectif');
 const openPortfolio = document.getElementById('project_portfolio');
 const openEsport = document.getElementById('project_esport');
 const openNSI = document.getElementById('project_nsi');
@@ -6,6 +7,10 @@ const closePopup = document.getElementById('closePopup');
 const popupProjects = document.getElementById('projects_popup');
 
 /* Initialisation des écouteurs d'événements liés à l'ouverture de la popup détaillant les projets */
+// Appelle la fonction 'openPopup' lorsque la div du projet du portfolio collectif est cliquée
+openPortfolioCollectif.addEventListener('click', () => {
+    openPopup('portfolioCollectif');
+});
 // Appelle la fonction 'openPopup' lorsque la div du projet du portfolio personnel est cliquée
 openPortfolio.addEventListener('click', () => {
     openPopup('portfolio');
@@ -33,7 +38,24 @@ function openPopup(projectName) {
     */
    
     switch (projectName) {
+        case 'portfolioCollectif':
+            document.getElementById('project_title_portfolio_collectif').classList.remove("hidden");
+            document.getElementById('project_description_portfolio_collectif').classList.remove("hidden");
+            document.getElementById('project_image_portfolio_collectif').classList.remove("hidden");
+            document.getElementById('project_title_portfolio').classList.add("hidden");
+            document.getElementById('project_description_portfolio').classList.add("hidden");
+            document.getElementById('project_image_portfolio').classList.add("hidden");
+            document.getElementById('project_title_esport').classList.add("hidden");
+            document.getElementById('project_description_esport').classList.add("hidden");
+            document.getElementById('project_image_esport').classList.add("hidden");
+            document.getElementById('project_title_nsi').classList.add("hidden");
+            document.getElementById('project_description_nsi').classList.add("hidden");
+            document.getElementById('project_image_nsi').classList.add("hidden");
+            break;
         case 'portfolio':
+            document.getElementById('project_title_portfolio_collectif').classList.add("hidden");
+            document.getElementById('project_description_portfolio_collectif').classList.add("hidden");
+            document.getElementById('project_image_portfolio_collectif').classList.add("hidden");
             document.getElementById('project_title_portfolio').classList.remove("hidden");
             document.getElementById('project_description_portfolio').classList.remove("hidden");
             document.getElementById('project_image_portfolio').classList.remove("hidden");
@@ -46,6 +68,9 @@ function openPopup(projectName) {
             break;
 
         case 'esport':
+            document.getElementById('project_title_portfolio_collectif').classList.add("hidden");
+            document.getElementById('project_description_portfolio_collectif').classList.add("hidden");
+            document.getElementById('project_image_portfolio_collectif').classList.add("hidden");
             document.getElementById('project_title_portfolio').classList.add("hidden");
             document.getElementById('project_description_portfolio').classList.add("hidden");
             document.getElementById('project_image_portfolio').classList.add("hidden");
@@ -57,7 +82,10 @@ function openPopup(projectName) {
             document.getElementById('project_image_nsi').classList.add("hidden");
             break;
 
-        case 'nsi':            
+        case 'nsi':
+            document.getElementById('project_title_portfolio_collectif').classList.add("hidden");
+            document.getElementById('project_description_portfolio_collectif').classList.add("hidden");
+            document.getElementById('project_image_portfolio_collectif').classList.add("hidden");        
             document.getElementById('project_title_portfolio').classList.add("hidden");
             document.getElementById('project_description_portfolio').classList.add("hidden");
             document.getElementById('project_image_portfolio').classList.add("hidden");

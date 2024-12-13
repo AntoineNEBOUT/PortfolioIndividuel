@@ -412,6 +412,59 @@
             
             <!-- Grille qui contient et organise les projets -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-9 mx-auto w-3/4 md:pt-32">
+                <!-- Div qui contient le projet du portfolio collectif -->
+                <div class="relative w-full md:w-full h-auto group cursor-pointer">
+                    <!-- Div qui correspond au fond décalé par rapport au contenu -->
+                    <div class="rounded w-full h-full bg-primary25 border-primary border absolute right-0 bottom-0 transform transition-transform duration-500 group-hover:-translate-x-6 group-hover:-translate-y-6">
+                        <div class="flex items-center h-fit w-fit">
+                            <p class="text-primaryGray mx-2 font-semibold">
+                                En savoir plus
+                            </p>
+                            <div class="w-4 h-4">
+                                <img src="images\others\newPage_light.svg" alt="icône sombre pour ouvrir la popup" class="dark:hidden">
+                                <img src="images\others\newPage_dark.svg" alt="icône clair pour ouvrir la popup" class="hidden dark:block">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Div qui contient les informations liées au projet -->
+                    <div id="project_portfolio_collectif" class="flex flex-col justify-between items-center gap-4 flex-wrap w-full h-full rounded border border-primary bg-opacity-50 backdrop-blur-md py-4 hover:shadow-lg">
+                        <!-- Titre du projet -->
+                        <h3 class="text-text text-center font-bold font-sans text-2xl p-2">
+                            Portfolio collectif
+                        </h3>
+
+                        <!-- Image d'illustration du projet -->
+                        <div class="flex justify-center items-center">
+                            <img src="images\projectsPictures\photoClasse.avif" alt="logo du portfolio collectif" class="h-40 w-auto rounded">
+                        </div>
+
+                        <!-- Icônes des compétences utilisées sur ce projet -->
+                        <div class="flex justify-center items-center flex-wrap gap-4">
+                            <!-- Div qui gère l'icône de HTML -->
+                            <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12 cursor-default">
+                                <img src="images\skillsPictures\programmingLangages\html5.svg" alt="icône html">
+                            </div>
+                            
+                            <!-- Div qui gère l'icône de TailwindCSS -->
+                            <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12 cursor-default">
+                                <img src="images\skillsPictures\frameworks\tailwindcss.svg" alt="icône tailwindcss">
+                            </div>
+                            
+                            <!-- Div qui gère l'icône de Visual Studio Code -->
+                            <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12 cursor-default">
+                                <img src="images\skillsPictures\tools\vscode.svg" alt="icône visual studio code">
+                            </div>
+                            
+                            <!-- Div qui gère l'icône de GitHub -->
+                            <div class="border border-primary rounded p-2 bg-primary25 transform transition-transform duration-200 hover:scale-110 hover:shadow-md flex justify-center items-center w-12 h-12 cursor-default">
+                                <img src="..\images\skillsPictures\tools\Github_light.svg" alt="icône de GitHub" class="dark:hidden">
+                                <img src="..\images\skillsPictures\tools\Github_dark.svg" alt="icône de GitHub" class="hidden dark:block">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Div qui contient le projet du portfolio personnel -->
                 <div class="relative w-full md:w-full h-auto group cursor-pointer">
                     <!-- Div qui correspond au fond décalé par rapport au contenu -->
@@ -565,7 +618,10 @@
                     <!-- Div qui représente la popup des projets et qui contient son contenu -->
                     <div class="bg-cardBackground text-text p-6 rounded shadow-lg w-3/4 h-auto flex flex-col items-center gap-4">
                         <!-- Titre des projets -->
-                        <h3 id="project_title_portfolio" class="text-2xl font-bold text-center">
+                        <h3 id="project_title_portfolio_collectif" class="text-2xl font-bold text-center">
+                            Portfolio collectif
+                        </h3>
+                        <h3 id="project_title_portfolio" class="text-2xl font-bold text-center hidden">
                             Portfolio personnel
                         </h3>
                         <h3 id="project_title_esport" class="text-2xl font-bold text-center hidden">
@@ -576,7 +632,10 @@
                         </h3>
 
                         <!-- Description des projets -->
-                        <p id="project_description_portfolio" class="text-justify md:w-3/4">
+                        <p id="project_description_portfolio_collectif" class="text-justify md:w-3/4">
+                            Il s’agit d’un projet dont l’objectif était de réaliser un portfolio représentant notre promotion de Bachelor 1 de 2024 de l'Institut G4 (au moment de sa réalisation). Il m'a permis de mettre en pratique mes techniques de gestion de projet tout en renforçant mes compétences en développement front avec Tailwind CSS.
+                        </p>
+                        <p id="project_description_portfolio" class="text-justify md:w-3/4 hidden">
                             Il s’agit d’un projet dont l’objectif est d’aboutir à la création d’un portfolio personnel. Il m’a permis de mettre en pratique mes compétences organisationnelles et de design avec Figma. Ce projet s’inscrit dans un projet plus important, celui de réaliser à terme : un portfolio commun pour notre promotion.
                         </p>
                         <p id="project_description_esport" class="text-justify md:w-3/4 hidden">
@@ -587,7 +646,10 @@
                         </p>
 
                         <!-- Image des projets -->
-                        <div id="project_image_portfolio" class="w-1/2 md:w-1/4 lg:w-1/5 xl:w-40">
+                        <div id="project_image_portfolio_collectif" class="w-1/2 md:w-1/4 lg:w-1/5 xl:w-40">
+                            <img id="project_image" src="images\\projectsPictures\\photoClasse.avif" alt="image du projet" class="rounded">
+                        </div>
+                        <div id="project_image_portfolio" class="w-1/2 md:w-1/4 lg:w-1/5 xl:w-40 hidden">
                             <img id="project_image" src="images\\projectsPictures\\portfolioLogo.avif" alt="image du projet" class="rounded">
                         </div>
                         <div id="project_image_esport" class="w-1/2 md:w-1/4 lg:w-1/5 xl:w-40 hidden">
